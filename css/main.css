@@ -7,6 +7,14 @@
     -webkit-box-sizing: border-box;
 }
 
+/* Fonts */
+
+@font-face {
+    font-family: "MainFont";
+    src: url(/Fonts/Guminert.ttf);
+}
+
+
 li {
     list-style: none;
 }
@@ -17,11 +25,13 @@ html {
 
 body {
     font-size: 1rem;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: "Cairo", sans-serif;
+    font-weight: 600;
     color: #333;
     background-color: #f8f9fa;
 }
+
+
 
 /* End General */
 
@@ -99,6 +109,7 @@ body {
 
 .mainContainer {
 
+    font-family: "MainFont";
     background-color: #f3f3f3;
     padding: 0 20px;
     margin: 0 auto;
