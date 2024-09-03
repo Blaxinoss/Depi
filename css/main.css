@@ -7,13 +7,13 @@
     -webkit-box-sizing: border-box;
 }
 
+
 /* Fonts */
 
 @font-face {
     font-family: "MainFont";
     src: url(/Fonts/Guminert.ttf);
 }
-
 
 li {
     list-style: none;
@@ -32,7 +32,6 @@ body {
 }
 
 
-
 /* End General */
 
 
@@ -45,9 +44,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
-
 
 .header .logo {
     font-size: 30px;
@@ -96,7 +93,6 @@ body {
 /* End Header */
 
 
-
 /* Start General Sections Settings */
 
 .IntroVideo {
@@ -105,46 +101,55 @@ body {
     height: 600px;
 }
 
-
-
-.mainContainer {
-
-    font-family: "MainFont";
-    background-color: #f3f3f3;
-    padding: 0 20px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, minmax(300px, 1fr));
-    gap: 20px;
+.IntroVideo+.quiz-section {
+    margin-top: -6px;
 }
 
-.section {
-    padding: 20px;
-    background-color: #ddd;
-    border: 1px solid #ccc;
+.quiz-section {
+    background-color: #ffc300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    height: 300px;
+}
+
+.laptop-container {
+    flex: 1;
+    text-align: center;
+}
+
+.text-container {
+    flex: 2;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+    font-size: 35px;
+}
+
+#quiz-button {
+    background-color: #ffffff;
+    color: #003556;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.section-1 {
-    padding: 5px;
+.image-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-.section-2 {
-    background-color: #e67e22;
+.image-container {
+    flex: 1;
+    padding-right: 20px;
 }
 
-.section-3 {
-    background-color: #e74c3c;
+.text-container {
+    flex: 2;
 }
-
-.section-4 {
-    background-color: #8e44ad;
-}
-
-.section-5 {
-    background-color: #3498db;
-}
-
-
-/* End General Sections Settings */
