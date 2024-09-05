@@ -153,3 +153,146 @@ body {
 .text-container {
     flex: 2;
 }
+
+/* /////Start Book Now */
+
+.book-now {
+    background-color: #d9d9d9;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.book-now h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+
+}
+
+.book-now h2::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #1a73e8;
+    margin: 5px auto 0;
+}
+
+.book-now .inputs {
+    padding: 120px 0 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    background-color: #f9f9f9;
+    border: 2px solid #3498db;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.dropdown-button:focus {
+    border-color: #2ecc71;
+}
+
+.dropdown-button .icon {
+    margin-right: 8px;
+}
+
+.dropdown-button .arrow {
+    margin-left: auto;
+    font-size: 12px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 250px;
+    border-radius: 8px;
+    max-height: 120px; 
+    overflow-y: auto;
+}
+
+.dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content span:hover {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+.date-container {
+    position: relative;
+}
+
+.date-container .date {
+    padding: 10px 15px 10px 40px; 
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    width: 250px;
+    outline: none;
+}
+
+.date-container .date:focus {
+    border-color: #2ecc71;
+}
+
+.date-container::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    left: 15px;
+    top: -22px;
+    color: #aaa;
+}
+
+.date-container::after {
+    content: '📅'; 
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #3498db;
+}
+
+.book-now .book-btn {
+    background-color: #1a73e8;
+    color: #f8f9fa;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.book-now .book-btn:hover {
+    background-color: #0250b6;
+}
+/* /////End Book Now */
