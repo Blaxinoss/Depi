@@ -90,7 +90,163 @@ body {
     background-color: #0f777e;
 }
 
+.quiz h2 {
+    color: #333;
+  }
+  
+.quiz p {
+    color: #666;
+  }
+  
+  /* Quiz CTA Section */
+  .quiz-section {
+    background-color: #fff;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quiz-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .quiz-text {
+    max-width: 50%;
+  }
+  
+  .quiz-text h2 {
+    font-size: 36px;
+    color: #2a2a72;
+    margin-bottom: 15px;
+  }
+  
+  .quiz-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .quiz-link-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #009ffd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quiz-link-btn:hover {
+    background-color: #006fbc;
+  }
+  
+  /* Quiz Image Section */
+  .quiz-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    padding-top: 10%;
+   
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .quiz-cta-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .quiz-text {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .quiz-image img {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+/*about us*/
+/* About Us Section */
+.about-us-section {
+    padding: 60px 20px;
+    background-color: #ececea;
+  }
+  
+  .about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-title h2 {
+    font-size: 36px;
+    color: #2a2a72;
+    text-align: center;
+  }
+  
+  .underline {
+    width: 80px;
+    height: 4px;
+    background-color: #009ffd;
+    margin: 10px auto 30px auto;
+  }
+  
+  /* About Us Content */
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .about-text {
+    max-width: 50%;
+    padding-right: 20px;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .about-text strong {
+    color: hsl(209, 100%, 30%);
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
 
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      max-width: 100%;
+      padding-right: 0;
+    }
+  
+    .about-image img {
+      margin-top: 20px;
+    }
+  }
+  
 /* End Header */
 
 
@@ -101,54 +257,7 @@ body {
     margin-top: -6px;
 }
 
-.quiz-section {
-    background-color: #ffc300;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    height: 300px;
-}
 
-.laptop-container {
-    flex: 1;
-    text-align: center;
-}
-
-.text-container {
-    flex: 2;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: bold;
-    font-size: 35px;
-}
-
-#quiz-button {
-    background-color: #ffffff;
-    color: #003556;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.image-text-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.image-container {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.text-container {
-    flex: 2;
-}
 
 /* /////Start Book Now */
 
