@@ -47,15 +47,71 @@
 
 
     </div>
+    <section class="quiz-section">
+        <div class="laptop-container" style="margin-top: 80px;">
+            <img src="laptop.png" alt="Flying laptop" style="width: 520px; height: auto;">
+        </div>
+        <div class="text-container">
+            <p>Take our car quiz now<br> and get personalized <br>recommendations</p>
+            <button id="quiz-button">get Started</button>
+        </div>
+    </section>
+    <section class="image-text-section">
+        <div class="image-container">
+            <img src="about.jpg" alt="car" style="max-width: 80%; height: auto; margin-left: 50px;">
+        </div>
+        <div class="text-container">
+            <h3>about us</h3>
+            <p>about the company</p>
+        </div>
+    </section>
 
-    <div class="mainContainer">
-        <div class="section section-2">Section 2: Quiz</div>
-        <div class="section section-3">Section 3: About Us</div>
-        <div class="section section-4">Section 4: Booking</div>
-        <div class="section section-5">Section 5: Featured Cars</div>
+    <section class="book-now">
+        <h2>Book Now</h2>
+        <div class="inputs">
 
-    </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <span class="icon">🚗</span>
+                    <span id="selectedCar">Car Type</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content cars">
+                    <span onclick="selectCar('Sedan', event)">Sedan</span>
+                    <span onclick="selectCar('SUV', event)">SUV</span>
+                    <span onclick="selectCar('Truck', event)">Truck</span>
+                    <span onclick="selectCar('Truck', event)">Truck</span>
+                    <span onclick="selectCar('Truck', event)">Truck</span>
+                </div>
+            </div>
 
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <span id="selectedLocation">Pickup Location</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content locatoins">
+                    <span onclick="selectCar('Alex', event)">Alex</span>
+                    <span onclick="selectCar('Cairo', event)">Cairo</span>
+                    <span onclick="selectCar('Giza', event)">Giza</span>
+                    <span onclick="selectCar('Giza', event)">Giza</span>
+                    <span onclick="selectCar('Giza', event)">Giza</span>
+                </div>
+            </div>
+
+            <div class="date-container" data-placeholder="Pickup Date">
+                <input type="date" class="date">
+            </div>
+
+            <div class="date-container" data-placeholder="Return Date">
+                <input type="date" class="date">
+            </div>
+
+        </div>
+        <button class="book-btn"></i>Book Now</button>
+
+    </section>
 
     <script src="index.js"></script>
 </body>
