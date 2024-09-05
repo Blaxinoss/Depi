@@ -79,9 +79,10 @@ body {
 .header .Sign_Login .Sign,
 .header .Sign_Login .Login {
     cursor: pointer;
-    padding: 8px;
     border-radius: 10px;
     color: white;
+    padding: 12px;
+    font-size: 1.3rem;
 }
 
 .Sign {
@@ -99,11 +100,6 @@ body {
 
 /* Start General Sections Settings */
 
-.IntroVideo {
-    width: 100%;
-    object-fit: cover;
-    height: 600px;
-}
 
 
 
@@ -148,3 +144,99 @@ body {
 
 
 /* End General Sections Settings */
+
+
+
+
+
+
+/* Start Section 1 */
+
+.IntroVideo {
+    width: 100%;
+    object-fit: cover;
+    height: 35vw;
+}
+
+.LandingVidSection {
+    position: relative;
+    perspective: 500px;
+}
+
+.LandingVidSection .ContentBox {
+    padding: 20px;
+    height: 60%;
+    width: 35%;
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateZ(100px);
+    background: rgba(255, 254, 254, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 254, 254, 0.39);
+    animation: VideoContentBoxShowUp 2s cubic-bezier(0.815, 0.005, 0.240, 1.000) forwards;
+}
+
+
+
+.LandingVidSection .ContentBox .ContentData h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 0;
+    color: #f9ff00;
+
+}
+
+.LandingVidSection .ContentBox .ContentData h4 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: #121010;
+    font-size: 1.2rem;
+
+}
+
+.LandingVidSection .ContentBox .ContentData {
+    padding: 0 10px;
+}
+
+.LandingVidSection .ContentBox .ContentData button {
+    display: block;
+    margin: 0 0 0 auto;
+    background-color: #0064a3;
+    cursor: pointer;
+    padding: 20px;
+    position: relative;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+
+/* End Section 1  */
+
+
+
+
+/* Start Animations  */
+
+/* End Animations */
+
+
+/* Start KeyFrames */
+@keyframes VideoContentBoxShowUp {
+
+    0%,
+    10% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        left: 68%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* End KeyFrames */
