@@ -1,3 +1,4 @@
+// @ts-nocheck
 // function to select an option and update the button text
 function selectCar(option, e) {
   if (e.target.parentElement.classList.contains("cars")) {
