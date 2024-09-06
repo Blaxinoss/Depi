@@ -10,17 +10,12 @@
 
 /* Fonts */
 
-@font-face {
-    font-family: "MainFont";
-    src: url(/Fonts/Guminert.ttf);
-}
-
 li {
     list-style: none;
 }
 
 html {
-    font-size: 16px;
+    font-size: 1em;
 }
 
 body {
@@ -43,17 +38,18 @@ body {
     padding: 15px 20px;
     display: flex;
     align-items: center;
+    font-size: 1vw;
     justify-content: space-between;
 }
 
 .header .logo {
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .header ul {
     background-color: #003556;
-    padding: 15px;
+    padding: 10px;
     color: white;
     border-radius: 10px;
 }
@@ -78,8 +74,8 @@ body {
     cursor: pointer;
     border-radius: 10px;
     color: white;
-    padding: 12px;
-    font-size: 1.3rem;
+    padding: 10px;
+    min-width: fit-content;
 }
 
 .Sign {
@@ -198,9 +194,8 @@ body {
 }
 
 .LandingVidSection .ContentBox {
-    padding: 20px;
-    height: 60%;
-    width: 35%;
+    width: 50%;
+    padding: 10px;
     position: absolute;
     left: 80%;
     top: 50%;
@@ -217,17 +212,18 @@ body {
 
 
 .LandingVidSection .ContentBox .ContentData h1 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: 1.3rem;
     margin-bottom: 0;
+    margin-top: 5px;
     color: #f9ff00;
 
 }
 
 .LandingVidSection .ContentBox .ContentData h4 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     margin-top: 10px;
     color: #121010;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 
 }
 
@@ -236,13 +232,13 @@ body {
 }
 
 .LandingVidSection .ContentBox .ContentData button {
+    font-size: 0.4rem;
     display: block;
     margin: 0 0 0 auto;
     background-color: #0064a3;
     cursor: pointer;
-    padding: 20px;
+    padding: 10px;
     position: relative;
-    font-size: 1.3rem;
     border-radius: 20px;
     border: none;
     color: white;
@@ -274,6 +270,10 @@ body {
 }
 
 /* End KeyFrames */
+
+
+
+/* Start Book Section */
 .book-now .inputs {
     padding: 120px 0 130px;
     display: flex;
@@ -390,3 +390,83 @@ body {
 }
 
 /* /////End Book Now */
+
+
+
+
+
+
+
+
+
+
+/* Start Media Quieries */
+
+@media only screen and (min-width: 600px) {
+
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 1.8rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData button {
+        font-size: 1rem;
+        padding: 13px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 2.4rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h4 {
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 2.2rem;
+        margin-top: 15px;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h4 {
+        font-size: 0.9rem;
+        margin: 20px 0;
+    }
+
+    .LandingVidSection .ContentBox {
+        width: 40%;
+    }
+
+    .LandingVidSection .ContentBox .ContentData button {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1400px) {
+    .LandingVidSection .ContentBox {
+        width: 35%;
+        padding: 25px;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 3rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h4 {
+        margin: 40px 0;
+        font-size: 1.3rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData button {
+        padding: 15px;
+    }
+}
+
+
+
+/* End Media Quieries */
