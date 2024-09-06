@@ -1,29 +1,31 @@
 /* Start General */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 
 /* Fonts */
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 html {
+
     font-size: 1em;
+
 }
 
 body {
-    font-size: 1rem;
-    font-family: "Cairo", sans-serif;
-    font-weight: 600;
-    color: #333;
-    background-color: #f8f9fa;
+  font-size: 1rem;
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  color: #333;
+  background-color: #f8f9fa;
 }
 
 
@@ -33,6 +35,7 @@ body {
 /* Start Header */
 
 .header {
+
     background-color: #000814;
     color: white;
     padding: 15px 20px;
@@ -52,40 +55,199 @@ body {
     padding: 10px;
     color: white;
     border-radius: 10px;
+
 }
 
 .header ul li {
-    display: inline-block;
-    padding: 0 10px;
-    cursor: pointer;
+  display: inline-block;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
 .header ul li:not(:last-child) {
-    border-right: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
 }
 
 .header .Sign_Login {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .header .Sign_Login .Sign,
 .header .Sign_Login .Login {
+
     cursor: pointer;
     border-radius: 10px;
     color: white;
     padding: 10px;
     min-width: fit-content;
+
 }
 
 .Sign {
-    background-color: rgb(148, 34, 34);
+  background-color: rgb(148, 34, 34);
 }
 
 .Login {
-    background-color: #0f777e;
+  background-color: #0f777e;
 }
 
+.quiz h2 {
+  color: #333;
+}
+
+.quiz p {
+  color: #666;
+}
+
+/* Quiz CTA Section */
+.quiz-section {
+  background-color: #fff;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.quiz-text {
+  max-width: 50%;
+}
+
+.quiz-text h2 {
+  font-size: 36px;
+  color: #2a2a72;
+  margin-bottom: 15px;
+}
+
+.quiz-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.quiz-link-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #009ffd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-link-btn:hover {
+  background-color: #006fbc;
+}
+
+/* Quiz Image Section */
+.quiz-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  padding-top: 10%;
+ 
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .quiz-cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quiz-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .quiz-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+/*about us*/
+/* About Us Section */
+.about-us-section {
+  padding: 60px 20px;
+  background-color: #ececea;
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title h2 {
+  font-size: 36px;
+  color: #2a2a72;
+  text-align: center;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #009ffd;
+  margin: 10px auto 30px auto;
+}
+
+/* About Us Content */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-text strong {
+  color: hsl(209, 100%, 30%);
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .about-image img {
+    margin-top: 20px;
+  }
+}
 
 /* End Header */
 
@@ -94,83 +256,36 @@ body {
 
 
 .IntroVideo+.quiz-section {
-    margin-top: -6px;
+  margin-top: -6px;
 }
 
-.quiz-section {
-    background-color: #ffc300;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    height: 300px;
-}
 
-.laptop-container {
-    flex: 1;
-    text-align: center;
-}
-
-.text-container {
-    flex: 2;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: bold;
-    font-size: 35px;
-}
-
-#quiz-button {
-    background-color: #ffffff;
-    color: #003556;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.image-text-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.image-container {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.text-container {
-    flex: 2;
-}
 
 /* /////Start Book Now */
 
 .book-now {
-    background-color: #d9d9d9;
-    padding: 60px 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  background-color: #d9d9d9;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .book-now h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
 
 }
 
 .book-now h2::after {
-    content: "";
-    display: block;
-    width: 150px;
-    height: 2px;
-    background-color: #1a73e8;
-    margin: 5px auto 0;
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background-color: #1a73e8;
+  margin: 5px auto 0;
 }
 
 /* End General Sections Settings */
@@ -183,14 +298,18 @@ body {
 /* Start Section 1 */
 
 .IntroVideo {
-    width: 100%;
-    object-fit: cover;
-    height: 35vw;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 .LandingVidSection {
-    position: relative;
-    perspective: 500px;
+  position: relative;
+  perspective: 500px;
+  height: 35vw;
+}
+.LandingVidSection .ContentBox .ContentData {
+padding: 20px; 
 }
 
 .LandingVidSection .ContentBox {
@@ -207,11 +326,11 @@ body {
     -webkit-backdrop-filter: blur(4.9px);
     border: 1px solid rgba(255, 254, 254, 0.39);
     animation: VideoContentBoxShowUp 2s cubic-bezier(0.815, 0.005, 0.240, 1.000) forwards;
+
 }
 
-
-
 .LandingVidSection .ContentBox .ContentData h1 {
+
     font-size: 1.3rem;
     margin-bottom: 0;
     margin-top: 5px;
@@ -220,16 +339,15 @@ body {
 }
 
 .LandingVidSection .ContentBox .ContentData h4 {
+
     margin-bottom: 5px;
     margin-top: 10px;
     color: #121010;
     font-size: 0.8rem;
 
+
 }
 
-.LandingVidSection .ContentBox .ContentData {
-    padding: 0 10px;
-}
 
 .LandingVidSection .ContentBox .ContentData button {
     font-size: 0.4rem;
@@ -242,6 +360,7 @@ body {
     border-radius: 20px;
     border: none;
     color: white;
+
 }
 
 /* End Section 1  */
@@ -257,16 +376,16 @@ body {
 /* Start KeyFrames */
 @keyframes VideoContentBoxShowUp {
 
-    0%,
-    10% {
-        opacity: 0;
-    }
+  0%,
+  10% {
+      opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-        left: 68%;
-        transform: translate(-50%, -50%);
-    }
+  100% {
+      opacity: 1;
+      left: 68%;
+      transform: translate(-50%, -50%);
+  }
 }
 
 /* End KeyFrames */
@@ -275,118 +394,118 @@ body {
 
 /* Start Book Section */
 .book-now .inputs {
-    padding: 120px 0 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
+  padding: 120px 0 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown-button {
-    background-color: #f9f9f9;
-    border: 2px solid #3498db;
-    padding: 10px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 8px;
-    width: 250px;
+  background-color: #f9f9f9;
+  border: 2px solid #3498db;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 250px;
 }
 
 .dropdown-button:focus {
-    border-color: #2ecc71;
+  border-color: #2ecc71;
 }
 
 .dropdown-button .icon {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .dropdown-button .arrow {
-    margin-left: auto;
-    font-size: 12px;
+  margin-left: auto;
+  font-size: 12px;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    min-width: 250px;
-    border-radius: 8px;
-    max-height: 120px;
-    overflow-y: auto;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 250px;
+  border-radius: 8px;
+  max-height: 120px;
+  overflow-y: auto;
 }
 
 .dropdown-content span {
-    color: black;
-    padding: 12px 16px;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  display: block;
 }
 
 .dropdown-content span:hover {
-    background-color: #f1f1f1;
-    border-radius: 8px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
 }
 
 .date-container {
-    position: relative;
+  position: relative;
 }
 
 .date-container .date {
-    padding: 10px 15px 10px 40px;
-    border: 2px solid #3498db;
-    border-radius: 8px;
-    background-color: #f0f0f0;
-    font-size: 16px;
-    width: 250px;
-    outline: none;
+  padding: 10px 15px 10px 40px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  width: 250px;
+  outline: none;
 }
 
 .date-container .date:focus {
-    border-color: #2ecc71;
+  border-color: #2ecc71;
 }
 
 .date-container::before {
-    content: attr(data-placeholder);
-    position: absolute;
-    left: 15px;
-    top: -22px;
-    color: #aaa;
+  content: attr(data-placeholder);
+  position: absolute;
+  left: 15px;
+  top: -22px;
+  color: #aaa;
 }
 
 .date-container::after {
-    content: '📅';
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #3498db;
+  content: '📅';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #3498db;
 }
 
 .book-now .book-btn {
-    background-color: #1a73e8;
-    color: #f8f9fa;
-    font-size: 1.2rem;
-    font-weight: bolder;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    width: 200px;
-    height: 45px;
-    border-radius: 5px;
-    transition: 0.3s;
+  background-color: #1a73e8;
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 .book-now .book-btn:hover {
-    background-color: #0250b6;
+  background-color: #0250b6;
 }
 
 /* /////End Book Now */
