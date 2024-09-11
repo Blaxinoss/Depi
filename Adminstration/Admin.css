@@ -1,0 +1,505 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family: "Cairo", sans-serif;
+    font-weight: 600;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Main Content Layout */
+.MainContent {
+    display: flex;
+    width: 100%;
+
+}
+
+.SideBar {
+    color: white;
+    width: 250px;
+    background-color: #000814;
+
+    font-size: 2em;
+    position: relative;
+}
+
+
+
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+
+
+.SideBarUl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.SideBarLi {
+    cursor: pointer;
+    font-size: 0.7em;
+    padding: 20px 40px;
+    margin: 5px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.SideBarLi:first-child {
+    background-color: #00ff8433;
+    border-radius: 10px;
+}
+
+.SideBarLi:first-child:before {
+    content: "";
+    border-left: 10px solid #f3db2f;
+    position: absolute;
+    height: 70%;
+    left: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.SideBarLi i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.SideBarLi:last-child::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 2px solid #ffffff20;
+    width: 80%;
+    bottom: -10px;
+    left: 5%;
+    top: 50%;
+}
+
+.SideBarLogOut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff20;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.SideBarLogOut i {
+    margin: 10px;
+}
+
+.SideBarLogOut div {
+    width: 100%;
+}
+
+/* Main Section Styles */
+.MainSection {
+
+    background-color: #2C323D;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(50px, 300px));
+    grid-template-rows: repeat(5, minmax(300px, 2fr));
+    padding: 20px;
+    gap: 30px 20px;
+}
+
+
+
+
+.CarModel {
+    position: relative;
+    background-color: #8bcdcd;
+    text-align: center;
+    color: white;
+    background: linear-gradient(#09203F, #537895);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Carter One", sans-serif;
+    font-weight: 300;
+}
+
+.CarModel img {
+    width: 88%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 30%);
+
+}
+
+.TextData {
+    font-size: 1.1em;
+    text-align: start;
+    margin: 0 0 20px 10px;
+}
+
+.TextData h4 {
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.TextData .Date {
+    font-size: 0.7em;
+    color: #999999;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+
+
+.PriceDetails {
+    position: absolute;
+    font-size: 0.8em;
+    width: 90%;
+    gap: 15px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.PriceDetails .price p:first-of-type {
+    color: #DE8350;
+}
+
+.PriceDetails .ViewDetails {
+    background-color: #09203F;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+
+@media only screen and (max-width:1700px) {
+    .MainSection {
+
+        grid-template-columns: repeat(4, minmax(auto, 1fr));
+        grid-template-rows: repeat(7, minmax(300px, 1fr));
+    }
+}
+
+@media only screen and (max-width:1350px) {
+    .MainSection {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        grid-template-rows: repeat(9, minmax(300px, 1fr));
+    }
+
+    .MainContent {
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width:1050px) {
+
+    .MainSection {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-rows: repeat(13, minmax(300px, 1fr));
+    }
+
+    .MainContent {
+        height: fit-content;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    .SideBar {
+        font-size: 1.2em;
+    }
+
+    .SideBarLi {
+        font-size: 1em;
+        padding: 15px 20px;
+    }
+
+    .CarModel22 img {
+        width: 117%;
+        transform: translate(-47%, 25%);
+    }
+
+}
+
+@media only screen and (max-width:735px) {
+    .MainSection {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-rows: repeat(13, minmax(252px, 1fr));
+    }
+
+    .MainContent {
+        height: fit-content;
+        display: block;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    .SideBar {
+        width: 100%;
+    }
+
+    .logo {
+        padding: 10px 10px;
+        margin: 0;
+    }
+
+    .SideBarUl {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+
+    }
+
+    .SideBarLi {
+        padding: 0 5px;
+        margin: 0px 10px;
+        font-size: 0.8em;
+    }
+
+    .SideBarLi .SideBarIcon {
+        display: none;
+    }
+
+    .SideBarLi:last-child::after {
+        display: none;
+    }
+
+    .SideBarLogOut {
+        transform: translateX(210%);
+        top: 10px;
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+    }
+
+    .SideBarLogOut div {
+        display: none;
+    }
+
+    .SideBarLi:first-child:before {
+        display: none;
+    }
+
+    .SideBarLi p {
+        padding: 5px 5px;
+    }
+
+
+}
+
+
+.CarModel1 img {
+    transform: translate(-50%, 50%);
+}
+
+.CarModel2 img {
+    width: 97%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel3 img {
+    transform: translate(-50%, 65%);
+}
+
+.CarModel4 img {
+    width: 80%;
+    transform: translate(-50%, 60%);
+}
+
+.CarModel5 img {
+    width: 100%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel6 img {
+    width: 104%;
+    transform: translate(-50%, 15%);
+}
+
+
+.CarModel7 img {
+    width: 95%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel8 img {
+    width: 100%;
+    transform: translate(-50%, 40%);
+}
+
+.CarModel9 img {
+    width: 100%;
+    transform: translate(-50%, 13%);
+}
+
+.CarModel10 img {
+    width: 93%;
+    transform: translate(-50%, 15%);
+}
+
+
+.CarModel11 img {
+    width: 95%;
+    transform: translate(-50%, 25%);
+}
+
+.CarModel12 img {
+    width: 95%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel13 img {
+    width: 100%;
+    transform: translate(-50%, 33%);
+}
+
+.CarModel14 img {
+    width: 110%;
+    transform: translate(-50%, 37%);
+}
+
+.CarModel15 img {
+    width: 90%;
+    transform: translate(-50%, 33%);
+}
+
+.CarModel16 img {
+    width: 98%;
+    transform: translate(-50%, 38%);
+}
+
+.CarModel17 img {
+    width: 120%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel18 img {
+    width: 105%;
+    object-fit: cover;
+    transform: translate(-46%, 30%);
+}
+
+.CarModel19 img {
+    width: 115%;
+    transform: translate(-50%, 37%);
+}
+
+.CarModel20 img {
+    width: 100%;
+    transform: translate(-50%, 10%);
+}
+
+.CarModel21 img {
+    width: 113%;
+    transform: translate(-50%, 25%);
+}
+
+.CarModel22 img {
+    width: 135%;
+    transform: translate(-47%, 13%);
+}
+
+.CarModel23 img {
+    width: 115%;
+    transform: translate(-50%, 30%);
+}
+
+.CarModel24 img {
+    width: 90%;
+    transform: translate(-50%, 30%);
+}
+
+
+
+
+
+@media only screen and (max-width:650px) {
+
+    .SideBarLi {
+
+        margin: 0 3px;
+
+    }
+
+    .CarModel img {
+
+        top: 35px;
+    }
+
+    .CarModel22 img {
+        width: 109%;
+        transform: translate(-47%, 30%);
+    }
+
+
+}
+
+@media only screen and (max-width:450px) {
+
+    .SideBarLi {
+
+        margin: 0;
+
+    }
+
+
+}
+
+
+@media only screen and (max-width:450px) {
+
+    .carData {
+        min-height: 100px;
+    }
+
+}
