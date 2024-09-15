@@ -1,3 +1,4 @@
+// @ts-nocheck
 
 const openQuizBtn = document.getElementById('openQuizBtn');
 const quizModal = document.getElementById('quizModal');

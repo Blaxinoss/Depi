@@ -4,145 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-
-    <title>Document</title>
+    <title>Ramy Rent - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 
 <body>
-
-    <div class="header">
-        <div class="logo">logo</div>
-        <ul class="nav_Links">
-            <li>Home</li>
-            <li>Car gallery</li>
-            <li>Booking</li>
-            <li>Car quiz</li>
-            <li>Contact us</li>
-        </ul>
-
-        <div class="Sign_Login">
-            <div class="Sign">Sign up</div>
-            <div class="Login">Log in</div>
+    <header class="navbar">
+        <div class="logo">
+            <img src="../Images/logo.png" alt="Logo">
         </div>
-    </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#hero-section">Home</a></li>
+                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href="#book-now">book now</a></li>
+                <li><a href="sign-in.html" class="sign">Sign In</a></li>
+                <li><a href="join-us.html" class="sign">join-us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="LandingVidSection">
-        <video class="IntroVideo section section-1" src="../Images/StoryBlock-Mi7ytou8Fe.mp4" autoplay muted
-            disablePictureInPicture playsinline loop>
-        </video>
-        <div class="ContentBox">
-            <div class="ContentData">
-                <h1>Ride in Comfort, Arrive in Style</h1>
-                <h4>Ready to hit the road? Discover our vehicles and
-                    enjoy a superior rental experience.</h4>
-                <button>Explore Now!</button>
+    <main class="hero-section" id="hero-section">
+        <div class="overlay-text">
+            <h1>luxurious <br> services </h1>
+        </div>
+        <div class="car-image">
+            <img src="../Images/car.jpg" alt="Car">
+        </div>
+    </main>
+    <section class="quiz-section">
+        <div class="quiz-container">
+            <!-- Text Section -->
+            <div class="quiz-text">
+                <h2>Find Your Ideal Car</h2>
+                <p>Looking for the perfect car? Take our short quiz and get personalized recommendations based on
+                    your driving preferences, budget, and more.</p>
+                <a href="quiz.html" class="quiz-link-btn">Take the Quiz</a>
+            </div>
+
+            <!-- Image Section -->
+            <div class="quiz-image">
+                <img src="../Images/carss.png" alt="Car Image">
             </div>
         </div>
-        <section class="quiz-section">
-            <div class="quiz-container">
+    </section>
+    <!-- About Us Section -->
+    <section class="about-us-section" id="about-us-section">
+        <div class="about-us-container">
+            <!-- Title -->
+            <div class="about-title">
+                <h2>About Us</h2>
+                <div class="underline"></div>
+            </div>
+
+            <!-- About Us Content -->
+            <div class="about-content">
                 <!-- Text Section -->
-                <div class="quiz-text">
-                    <h2>Find Your Ideal Car</h2>
-                    <p>Looking for the perfect car? Take our short quiz and get personalized recommendations based on
-                        your driving preferences, budget, and more.</p>
-                    <a href="quiz.html" class="quiz-link-btn">Take the Quiz</a>
+                <div class="about-text">
+                    <p>
+                        Welcome to <strong>ramy rental</strong>, your number one choice for car rentals. With a wide
+                        range of vehicles to choose from, we strive to provide the best car rental service for your
+                        needs. Whether you're looking for a luxury experience, a family-friendly ride, or an
+                        eco-friendly vehicle, we have the perfect option for you.
+                    </p>
+                    <p>
+                        Our goal is to make the car rental process smooth and hassle-free. With competitive pricing,
+                        a straightforward booking system, and 24/7 customer support, we ensure that your journey
+                        with us is exceptional. Ramy Rental, it's all about getting you on the road, quickly and
+                        comfortably.
+                    </p>
                 </div>
 
                 <!-- Image Section -->
-                <div class="quiz-image">
-                    <img src="../Images/carss.png" alt="Car Image">
+                <div class="about-image">
+                    <img src="../Images/about-us-image.png" alt="Our Team">
                 </div>
             </div>
-        </section>
-        <!-- About Us Section -->
-        <section class="about-us-section">
-            <div class="about-us-container">
-                <!-- Title -->
-                <div class="about-title">
-                    <h2>About Us</h2>
-                    <div class="underline"></div>
-                </div>
+        </div>
+    </section>
 
-                <!-- About Us Content -->
-                <div class="about-content">
-                    <!-- Text Section -->
-                    <div class="about-text">
-                        <p>
-                            Welcome to <strong>ramy rental</strong>, your number one choice for car rentals. With a wide
-                            range of vehicles to choose from, we strive to provide the best car rental service for your
-                            needs. Whether you're looking for a luxury experience, a family-friendly ride, or an
-                            eco-friendly vehicle, we have the perfect option for you.
-                        </p>
-                        <p>
-                            Our goal is to make the car rental process smooth and hassle-free. With competitive pricing,
-                            a straightforward booking system, and 24/7 customer support, we ensure that your journey
-                            with us is exceptional. Ramy Rental, it's all about getting you on the road, quickly and
-                            comfortably.
-                        </p>
-                    </div>
+    <section class="book-now">
+        <h2>Book Now</h2>
+        <div class="inputs">
 
-                    <!-- Image Section -->
-                    <div class="about-image">
-                        <img src="../Images/about-us-image.png" alt="Our Team">
-                    </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <span class="icon">🚗</span>
+                    <span id="selectedCar">Car Type</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content cars">
+                    <span onclick="selectCar('Sedan', event)">Sedan</span>
+                    <span onclick="selectCar('SUV', event)">SUV</span>
+                    <span onclick="selectCar('Truck', event)">Truck</span>
+                    <span onclick="selectCar('Truck', event)">Truck</span>
+                    <span onclick="selectCar('Truck', event)">Truck</span>
                 </div>
             </div>
-        </section>
 
-        <section class="book-now">
-            <h2>Book Now</h2>
-            <div class="inputs">
-
-                <div class="dropdown">
-                    <button class="dropdown-button">
-                        <span class="icon">🚗</span>
-                        <span id="selectedCar">Car Type</span>
-                        <span class="arrow">▼</span>
-                    </button>
-                    <div class="dropdown-content cars">
-                        <span onclick="selectCar('Sedan', event)">Sedan</span>
-                        <span onclick="selectCar('SUV', event)">SUV</span>
-                        <span onclick="selectCar('Truck', event)">Truck</span>
-                        <span onclick="selectCar('Truck', event)">Truck</span>
-                        <span onclick="selectCar('Truck', event)">Truck</span>
-                    </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <span id="selectedLocation">Pickup Location</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content locatoins">
+                    <span onclick="selectCar('Alex', event)">Alex</span>
+                    <span onclick="selectCar('Cairo', event)">Cairo</span>
+                    <span onclick="selectCar('Giza', event)">Giza</span>
+                    <span onclick="selectCar('Giza', event)">Giza</span>
+                    <span onclick="selectCar('Giza', event)">Giza</span>
                 </div>
-
-                <div class="dropdown">
-                    <button class="dropdown-button">
-                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-                        <span id="selectedLocation">Pickup Location</span>
-                        <span class="arrow">▼</span>
-                    </button>
-                    <div class="dropdown-content locatoins">
-                        <span onclick="selectCar('Alex', event)">Alex</span>
-                        <span onclick="selectCar('Cairo', event)">Cairo</span>
-                        <span onclick="selectCar('Giza', event)">Giza</span>
-                        <span onclick="selectCar('Giza', event)">Giza</span>
-                        <span onclick="selectCar('Giza', event)">Giza</span>
-                    </div>
-                </div>
-
-                <div class="date-container" data-placeholder="Pickup Date">
-                    <input type="date" class="date">
-                </div>
-
-                <div class="date-container" data-placeholder="Return Date">
-                    <input type="date" class="date">
-                </div>
-
             </div>
-            <button class="book-btn"></i>Book Now</button>
 
-        </section>
+            <div class="date-container" data-placeholder="Pickup Date">
+                <input type="date" class="date">
+            </div>
 
-        <script src="index.js"></script>
+            <div class="date-container" data-placeholder="Return Date">
+                <input type="date" class="date">
+            </div>
+
+        </div>
+        <button class="book-btn"></i>Book Now</button>
+
+    </section>
+    <div class="contact_us">
+        <div class="responsive-container-block bigContainer">
+            <div class="responsive-container-block Container">
+                <div class="responsive-cell-block wk-desk-7 wk-ipadp-8 wk-tab-12 wk-mobile-12">
+                    <p class="text-blk heading">
+                        Contact us
+                    </p>
+                    <form class="formTable" id="izml">
+                        <div class="firstRow">
+                            <div class="fullNameArea">
+                                <p class="cardHead">
+                                    Full Name
+                                </p>
+                                <input class="fullName" id="fullName" name="fullName" type="text">
+                            </div>
+                            <div class="emailArea">
+                                <p class="cardHead">
+                                    Email Address
+                                </p>
+                                <input class="email" id="email" name="email" type="text">
+                            </div>
+                        </div>
+                        <div class="messageArea">
+                            <p class="cardHead">
+                                Message
+                            </p>
+                            <textarea class="message" cols="30" id="message" name="message" rows="10"></textarea>
+                        </div>
+                        <a class="submit" href="#" id="w-c-s-bgc_p-1-dm-id-4">
+                            Send Message
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#hero-section">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#about-us-section">About-us</a></li>
+            <li class="menu__item"><a class="menu__link" href="gallery.html">gallery</a></li>
+            <li class="menu__item"><a class="menu__link" href="quiz.html">quiz</a></li>
+            <li class="menu__item"><a class="menu__link" href="#contact-us">Contact-us</a></li>
+
+        </ul>
+        <p>&copy;2024 Ramy Rent | All Rights Reserved</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+<script src="script.js"></script>
 
 </html>
