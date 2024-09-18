@@ -2,9 +2,9 @@
 const quizForm = document.getElementById('quiz-form');
 const resultDiv = document.getElementById('result');
 const carsData = [
-    { model: 'Cn7 f4', year: 2021, seatingCapacity: 5, luggageSpace: 'Medium', price: 1800, image: 'cn7-f420.jpg' },
-    { model: 'Kia cop', year: 2010, seatingCapacity: 4, luggageSpace: 'Small', price: 1000, image: 'kia-cop.jpg' },
-    { model: 'Honda civic', year: 2009, seatingCapacity: 5, luggageSpace: 'Medium', price: 1000, image: 'honda-civic.jpg' },
+    { model: 'Cn7 f4', year: 2021, seatingCapacity: 5, luggageSpace: 'Medium', price: 1800, image: 'Images/Elentra CN7 F4.png' },
+    { model: 'Kia cop', year: 2010, seatingCapacity: 4, luggageSpace: 'Small', price: 1000, image: 'Images/kia copet 2010.png' },
+    { model: 'Honda civic', year: 2009, seatingCapacity: 5, luggageSpace: 'Medium', price: 1000, image: 'Images/Honda civic.png' },
     {model:  "Elantra md", year: 2014, seatingCapacity: 5, luggageSpace: "Medium", price: 1200, image: "Images/Elentra Md 2014 frany.png" } ,
     { model: "Grand cerato", year: 2019, seatingCapacity: 5, luggageSpace: "Large", price: 1400, image: "Images/Kia Grand Cerato.png" },
     { model: "Elantra AD white", year: 2019, seatingCapacity: 5, luggageSpace: "Medium", price: 1600, image: "Images/Elenetra white 2020.png" },
@@ -14,7 +14,7 @@ const carsData = [
     { model: "Elantra Cn7 pepsi", year: 2021, seatingCapacity: 5, luggageSpace: "Medium", price: 1800, image: "Images/ELentra 2021 pepsi.png" },
     { model: "Kia cerato k3", year: 2014, seatingCapacity: 5, luggageSpace: "Medium", price: 1200, image: "Images/Kia k3 2015.png" },
     { model: "Elantra AD", year: 2017, seatingCapacity: 5, luggageSpace: "Medium", price: 1500, image: "Images/Elentra Ad 2017 champaigne .png" },
-    { model: "Cerato", year: 2018, seatingCapacity: 5, luggageSpace: "Medium", price: 1200, image: "Images/kia copet 2010.png" },
+    { model: "Cerato", year: 2018, seatingCapacity: 5, luggageSpace: "Medium", price: 1200, image: "Images/cerato2018black.png" },
     { model: "Lancer shark", year: 2015, seatingCapacity: 5, luggageSpace: "Small", price: 1200, image: "Images/Lancer Shark rose.png" },
     { model: "new cerato", year: 2018, seatingCapacity: 5, luggageSpace: "Medium", price: 1200, image: "Images/Kia  Cerato 2018 K4.png" },
     { model: "Elantra 2020 frany", year: 2020, seatingCapacity: 5, luggageSpace: "Medium", price: 1600, image: "Images/ad 2020 dark grey (frany).png" },
