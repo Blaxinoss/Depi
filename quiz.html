@@ -1,68 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Quiz</title>
+    <title>Car Recommendation Quiz</title>
     <link rel="stylesheet" href="quiz-styles.css">
 </head>
 <body>
-    <section class="quiz-section">
-        <div class="quiz-container">
-            <h2>Find Your Perfect Ride</h2>
-            <p>Take our short quiz to get personalized car recommendations!</p>
-            <button class="quiz-btn" id="openQuizBtn">Take the Quiz</button>
+    <h1>Car Recommendation Quiz</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <label for="seating-capacity">How many people will the car need to seat?</label>
+            <select id="seating-capacity" name="seating-capacity">
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
-    </section>
-
-    <div id="quizModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeQuizBtn">&times;</span>
-            <h2>Car Recommendation Quiz</h2>
-            <div class="quiz-form">
-                <div class="question">
-                    <p>What is your preferred car size?</p>
-                    <select id="carSize">
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
-                    </select>
-                </div>
-                <div class="question">
-                    <p>What is your maximum budget?</p>
-                    <select id="budget">
-                        <option value="Economy">Economy</option>
-                        <option value="Mid-range">Mid-range</option>
-                        <option value="Luxury">Luxury</option>
-                    </select>
-                </div>
-                <div class="question">
-                    <p>What is your preferred luggage space?</p>
-                    <select id="luggageSpace">
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
-                    </select>
-                </div>
-                <button id="submitQuizBtn">Get Recommendations</button>
-
-            </div>
+        <div class="question">
+            <label for="luggage-space">How much luggage space do you need?</label>
+            <select id="luggage-space" name="luggage-space">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
         </div>
-    </div>
-
-    <section id="resultSection" class="hidden">
-        <h2>Your Recommended Car</h2>
-        <div class="car-result">
-            <ul id="carDetailsList">
-                <li><strong>Model:</strong></li>
-                <li><strong>Year:</strong></li>
-                <li><strong>Seats:</strong></li>
-                <li><strong>Luggage Space:</strong></li>
-                <li><strong>Price:</strong></li>
-            </ul>
+        <div class="question">
+            <label for="budget">What is your budget?</label>
+            <input type="number" id="budget" name="budget" min="1000" max="3500">
         </div>
-    </section>
-
+        <button id="submit-btn">Get Recommended Car</button>
+    </form>
+    <div id="result"></div>
     <script src="quiz-script.js"></script>
 </body>
 </html>
