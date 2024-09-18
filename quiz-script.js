@@ -1,11 +1,10 @@
-// script.js
 const quizForm = document.getElementById('quiz-form');
 const resultDiv = document.getElementById('result');
 const carsData = [
     { model: 'Cn7 f4', year: 2021, seatingCapacity: 5, luggageSpace: 'Medium', price: 1800, image: 'Images/Elentra CN7 F4.png' },
     { model: 'Kia cop', year: 2010, seatingCapacity: 4, luggageSpace: 'Small', price: 1000, image: 'Images/kia copet 2010.png' },
     { model: 'Honda civic', year: 2009, seatingCapacity: 5, luggageSpace: 'Medium', price: 1000, image: 'Images/Honda civic.png' },
-    {model:  "Elantra md", year: 2014, seatingCapacity: 5, luggageSpace: "Medium", price: 1200, image: "Images/Elentra Md 2014 frany.png" } ,
+    { model: "Elantra md", year: 2014, seatingCapacity: 5, luggageSpace: "Medium", price: 1200, image: "Images/Elentra Md 2014 frany.png" },
     { model: "Grand cerato", year: 2019, seatingCapacity: 5, luggageSpace: "Large", price: 1400, image: "Images/Kia Grand Cerato.png" },
     { model: "Elantra AD white", year: 2019, seatingCapacity: 5, luggageSpace: "Medium", price: 1600, image: "Images/Elenetra white 2020.png" },
     { model: "Elantra Cn7 f3", year: 2021, seatingCapacity: 5, luggageSpace: "Medium", price: 1800, image: "Images/Elentra 2021 Grey F3.png" },
@@ -38,7 +37,7 @@ quizForm.addEventListener('submit', (e) => {
                car.price <= budget;
     });
 
-    if (filteredCars.length ===  0) {
+    if (filteredCars.length === 0) {
         // If no exact match, find the nearest car
         let nearestCar = null;
         let minDiff = Infinity;
@@ -53,22 +52,37 @@ quizForm.addEventListener('submit', (e) => {
 
         resultDiv.innerHTML = `
             <h2>Recommended Car:</h2>
-            <img src="${nearestCar.image}" alt="${nearestCar.model}" width="300" height="200">
+            <img src="${nearestCar.image}" alt="${nearestCar.model}" width="200" height="300">
             <p>Model: ${nearestCar.model}</p>
             <p>Year: ${nearestCar.year}</p>
             <p>Seating Capacity: ${nearestCar.seatingCapacity}</p>
             <p>Luggage Space: ${nearestCar.luggageSpace}</p>
             <p>Price: ${nearestCar.price}</p>
+            <button id="retake-btn">Retake Quiz</button>
         `;
     } else {
         resultDiv.innerHTML = `
             <h2>Recommended Car:</h2>
-            <img src="${filteredCars[0].image}" alt="${filteredCars[0].model}" width="300" height="200">
+            <img src="${filteredCars[0].image}" alt="${filteredCars[0].model}" width="200" height="300">
             <p>Model: ${filteredCars[0].model}</p>
             <p>Year: ${filteredCars[0].year}</p>
             <p>Seating Capacity: ${filteredCars[0].seatingCapacity}</p>
             <p>Luggage Space: ${filteredCars[0].luggageSpace}</p>
             <p>Price: ${filteredCars[0].price}</p>
+            <button id="retake-btn">Retake Quiz</button>
         `;
     }
+
+
+    quizForm.style.display = 'none';
+    heroh.style.display = 'none';
+    resultDiv.style.display = 'block';
+
+
+    document.getElementById('retake-btn').addEventListener('click', () => {
+      
+        quizForm.style.display = 'block';
+        resultDiv.style.display = 'none';
+        quizForm.reset();
+    });
 });
