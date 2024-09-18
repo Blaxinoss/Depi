@@ -50,7 +50,7 @@ function mapBudgetToPrice(budget) {
 // Function to find the nearest car based on user inputs
 function findNearestCar(userCarSize, userBudget, userLuggageSpace) {
     let nearestCar = null;
-    let minScore = Infinity;
+    let maxScore = 0;
     const maxBudget = mapBudgetToPrice(userBudget);
 
     for (const car of carData) {
@@ -67,67 +67,60 @@ function findNearestCar(userCarSize, userBudget, userLuggageSpace) {
             score += 1;
         }
 
-        if (score < minScore) {
+        if (score > maxScore) {
             nearestCar = car;
-            minScore = score;
+            maxScore = score;
         }
+    }
+
+    if (!nearestCar) {
+        throw new Error("No suitable car found. Please refine your search criteria.");
     }
 
     return nearestCar;
 }
 
-submitQuizBtn.addEventListener('click', () => {
-  const userCarSize = document.getElementById('carSize').value;
-  const userBudget = document.getElementById('budget').value;
-  const userLuggageSpace = document.getElementById('luggageSpace').value;
+// Function to display the nearest car details
+function displayNearestCar(nearestCar) {
+    const carImage = resultSection.querySelector('img');
+    const carDetailsList = resultSection.querySelector('ul');
 
-  const nearestCar = findNearestCar(userCarSize, userBudget, userLuggageSpace);
+    carImage.src = nearestCar.image;
+    carDetailsList.innerHTML = `
+        <li><strong>Model:</strong> ${nearestCar.model}</li>
+        <li><strong>Year:</strong> ${nearestCar.year}</li>
+        <li><strong>Seats:</strong> ${nearestCar.seats}</li>
+        <li><strong>Luggage Space:</strong> ${nearestCar.luggageSpace}</li>
+        <li><strong>Price:</strong> $${nearestCar.price}</li>
+    `;
+}
 
-  if (nearestCar) {
-    resultSection.classList.remove('hidden');
-    // Display the nearest car details
-  } else {
-    // Handle the case where no car is found
-  }
-});
-// Event listeners for opening and closing the modal
-openQuizBtn.addEventListener('click', () => {
-  quizModal.style.display = 'block';
+// Event listeners
+openQuizBtn .addEventListener('click', () => {
+    quizModal.style.display = 'block';
 });
 
 closeQuizBtn.addEventListener('click', () => {
-  quizModal.style.display = 'none';
+    quizModal.style.display = 'none';
 });
 
 window.addEventListener('click', (e) => {
-  if (e.target === quizModal) {
-    quizModal.style.display = 'none';
-  }
+    if (e.target === quizModal) {
+        quizModal.style.display = 'none';
+    }
 });
 
-// Event listener for form submission
 submitQuizBtn.addEventListener('click', () => {
-    const userCarSize = document.getElementById('carSize').value;
-    const userBudget = document.getElementById('budget').value;
-    const userLuggageSpace = document.getElementById('luggageSpace').value;
+    try {
+        const userCarSize = document.getElementById('carSize').value;
+        const userBudget = document.getElementById('budget').value;
+        const userLuggageSpace = document.getElementById('luggageSpace').value;
 
-    const nearestCar = findNearestCar(userCarSize, userBudget, userLuggageSpace);
+        const nearestCar = findNearestCar(userCarSize, userBudget, userLuggageSpace);
 
-    if (nearestCar) {
         resultSection.classList.remove('hidden');
-
-        const carImage = resultSection.querySelector('img');
-        const carDetailsList = resultSection.querySelector('ul');
-
-        carImage.src = nearestCar.image;
-        carDetailsList.innerHTML = `
-            <li><strong>Model:</strong> ${nearestCar.model}</li>
-            <li><strong>Year:</strong> ${nearestCar.year}</li>
-            <li><strong>Seats:</strong> ${nearestCar.seats}</li>
-            <li><strong>Luggage Space:</strong> ${nearestCar.luggageSpace}</li>
-            <li><strong>Price:</strong> $${nearestCar.price}</li>
-        `;
-    } else {
-        alert("No suitable car found. Please refine your search criteria.");
+        displayNearestCar(nearestCar);
+    } catch (error) {
+        alert(error.message);
     }
 });
