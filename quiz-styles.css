@@ -118,5 +118,34 @@ select {
 #submitQuizBtn:hover {
   background-color: #006fbc;
 }
-/*lp*/
+#resultSection {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+#resultSection {
+  display: none;
+}
+
+
+.car-result {
+  margin-top: 20px;
+}
+
+.car-result img {
+  max-width: 300px;
+  border-radius: 5px;
+}
+
+.car-result ul {
+  list-style: none;
+  padding: 0;
+}
+
+.car-result li {
+  margin-bottom: 10px;
+}
