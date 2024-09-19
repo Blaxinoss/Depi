@@ -43,6 +43,7 @@ body {
     border-radius: 25px;
     font-size: 14px;
     transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
 }
 
 .menu ul li a:hover {
@@ -52,6 +53,36 @@ body {
 .menu ul li a.sign:hover {
     background-color: #005db4; 
     color: #fff;
+}
+/* Add this media query to make the navbar responsive */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+  }
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu ul li a {
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+ 
+}
+@media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 5px;
+    justify-content: flex-start; /* Align the menu to the left side */
+  }
+  .menu ul {
+    text-align: left; /* Align the menu to the left side */
+  }
+  .menu ul li a {
+    padding: 3px 5px;
+    font-size: 12px;
+  }
 }
 /* Hero Section */
 .hero-section {
@@ -190,17 +221,6 @@ body {
     height: auto;
     object-fit: cover;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu ul {
-        gap: 10px;
-    }
-
-    .menu ul li a {
-        font-size: 12px;
-        padding: 8px 16px;
-    }
 
     .hero-section .overlay-text h1 {
         font-size: 48px;
@@ -891,10 +911,5 @@ body {
   }
   100% {
     background-positon-x: 0px;
-  }
-}
-@media (max-width: 1322px) {
-  .menu ul li a:not(.gallery, .sign-in, .join-us) {
-    display: none;
   }
 }
