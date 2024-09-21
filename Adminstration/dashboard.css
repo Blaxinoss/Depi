@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family: "Cairo", sans-serif;
+    font-weight: 600;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+/* Main Content Layout */
+.MainContent {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+}
+
+.SideBar {
+    color: white;
+    width: 250px;
+    background-color: #000814;
+
+    font-size: 2em;
+    position: relative;
+}
+
+
+
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+
+
+.SideBarUl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.SideBarLi {
+    cursor: pointer;
+    font-size: 0.7em;
+    padding: 20px 40px;
+    margin: 5px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* .SideBarLi:first-child {
+    background-color: #00ff8433;
+    border-radius: 10px;
+} */
+
+.active {
+    background-color: #00ff8433;
+    border-radius: 10px;
+    width: -webkit-fill-available;
+}
+
+.active::before {
+    content: "";
+    border-left: 10px solid #f3db2f;
+    position: absolute;
+    height: 70%;
+    left: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+
+/* 
+.SideBarLi:first-child:before {
+    content: "";
+    border-left: 10px solid #f3db2f;
+    position: absolute;
+    height: 70%;
+    left: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+} */
+
+.SideBarLi i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.SideBarLi:last-child::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 2px solid #ffffff20;
+    width: 80%;
+    bottom: -10px;
+    left: 5%;
+    top: 50%;
+}
+
+.SideBarLogOut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff20;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.SideBarLogOut i {
+    margin: 10px;
+}
+
+.SideBarLogOut div {
+    width: 100%;
+}
+
+.MainSection {
+
+    background-color: #2C323D;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardData {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+
+}
+
+.CounterContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    background-color: #0c4e80;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #e2e2e2;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.card i {
+    font-size: 2em;
+    margin: 0 0 10px 10px;
+    color: #26654a;
+}
+
+
+.card span {
+    padding: 0 15px;
+    font-size: 1.5em;
+    background-color: #124d7b54;
+    border-radius: 15px;
+}
+
+.SquareContainer {
+    display: flex;
+    flex: 1;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.SquareBox {
+    flex: 1;
+    min-width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.SquareBox h2 {
+    margin: 0 0 10px;
+}
+
+.SquareBox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.SquareBox table th,
+.SquareBox table td {
+    font-size: 1.3em;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.SquareBox p {
+    margin: 0;
+}
+
+.SquareBox {
+    flex: 1;
+    background-color: #d7d7d7;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th,
+td {
+
+    border-radius: 5px 0;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td {
+    color: #333;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background-color: #858a8e;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+.SquareBox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+
+.notification-item {
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #448eaf;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.5em;
+    margin: 10px 0;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.notification-item:hover {
+    background-color: #051f34;
+    transform: translateY(-2px);
+
+}
+
+.notification-item:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #0c4e80;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.SquareBox p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.MaintainSection {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(3, minmax(250px, 1fr));
+
+}
+
+.EnterMaintainContainer {
+    background: linear-gradient(45deg, #1d1515, #153654);
+    border-radius: 10px;
+    box-shadow: -3px 4px 10px 3px rgb(0 0 0 / 60%);
+}
+
+.MaintainSection {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+}
+
+.EnterMaintainContainer {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Flex container */
+.sploit {
+    color: white;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Form Styling */
+.form {
+    flex: 1;
+    position: relative;
+    /* Enable z-index */
+    z-index: 2;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 0 20px;
+    font-size: 1.2em;
+    /* Ensure the form is above the car image */
+}
+
+.form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Specific input width */
+.form input[type="datetime-local"] {
+    width: 100%;
+}
+
+.form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form [type="submit"] {
+    color: #ffffff;
+    background-color: #4b9442b8;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: #4b9442;
+    box-shadow: 0 0 5px rgba(75, 148, 66, 0.5);
+}
+
+/* Button hover effect */
+.form [type="submit"]:hover {
+    background-color: #408738;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Car Image Container */
+.CarPlace {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+/* Car Image Styling and Animation */
+.CarPlace img {
+    max-width: 128%;
+    height: auto;
+    transform: rotate3d(1, -1, 0, 15deg) translateX(-100px) translateZ(-50px);
+    border-radius: 10px;
+    box-shadow: -5px 3px 14px 8px rgba(0, 0, 0, 0.1);
+    z-index: -2;
+    animation: bounce 10s ease-in-out infinite;
+}
+
+
+.table-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #609abf;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+#maintenanceTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+}
+
+#maintenanceTable th,
+#maintenanceTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#maintenanceTable tr {
+    border: 1px solid #dddddd74;
+    border-radius: 5px;
+    color: #0c4e80;
+
+}
+
+#maintenanceTable th {
+
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#maintenanceTable tr:nth-child(even) {
+    background-color: #f2f2f269;
+}
+
+#maintenanceTable tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+#maintenanceTable td {
+    color: #010101;
+}
+
+table td:nth-child(5) {
+    max-width: 200px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+#searchInput {
+    width: 15%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: rotate3d(1, -1, 0, 2deg) translateX(-100px) translateZ(-50px);
+    }
+
+    50% {
+        transform: rotate3d(1, -1, 0, 8deg) translateX(-100px) translateY(-20px) translateZ(-40px) scale(1.005);
+    }
+}
+
+/* Responsive Design: Stacking form and image on smaller screens */
+@media (max-width: 768px) {
+    .sploit {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form,
+    .CarPlace {
+        flex: none;
+        width: 100%;
+    }
+
+    .CarPlace img {
+        max-width: 100%;
+        transform: none;
+        animation: none;
+    }
+}

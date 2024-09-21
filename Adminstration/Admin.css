@@ -21,11 +21,19 @@ body {
     background-color: #f8f9fa;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
 /* Main Content Layout */
 .MainContent {
     display: flex;
     width: 100%;
-
+    min-height: 100%;
 }
 
 .SideBar {
@@ -76,12 +84,18 @@ body {
     position: relative;
 }
 
-.SideBarLi:first-child {
+/* .SideBarLi:first-child {
     background-color: #00ff8433;
     border-radius: 10px;
+} */
+
+.active {
+    background-color: #00ff8433;
+    border-radius: 10px;
+    width: -webkit-fill-available;
 }
 
-.SideBarLi:first-child:before {
+.active::before {
     content: "";
     border-left: 10px solid #f3db2f;
     position: absolute;
@@ -91,6 +105,19 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 20px;
 }
+
+
+/* 
+.SideBarLi:first-child:before {
+    content: "";
+    border-left: 10px solid #f3db2f;
+    position: absolute;
+    height: 70%;
+    left: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+} */
 
 .SideBarLi i {
     display: flex;
@@ -136,7 +163,7 @@ body {
 
 /* Main Section Styles */
 .MainSection {
-
+    width: 100%;
     background-color: #2C323D;
     display: grid;
     grid-template-columns: repeat(6, minmax(50px, 300px));
@@ -154,7 +181,7 @@ body {
     text-align: center;
     color: white;
     background: linear-gradient(#09203F, #537895);
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     font-family: "Carter One", sans-serif;
     font-weight: 300;
@@ -207,7 +234,8 @@ body {
     color: #DE8350;
 }
 
-.PriceDetails .ViewDetails {
+.PriceDetails .ViewDetails,
+.PriceDetails .ViewDetailsAddCard {
     background-color: #09203F;
     padding: 10px;
     color: white;
@@ -216,7 +244,24 @@ body {
     margin-top: 5px;
 }
 
+.CarModel .ViewDetailsAddCardImage {
+    width: 133%;
+    padding: 34px;
+    transform: translate(-50%, -12%);
+}
 
+.CarModel #ViewDetailsAddCard {
+    padding: 40px;
+    font-size: 2rem;
+
+}
+
+@media only screen and (min-width:1700px) {
+    .CarModel img {
+        top: 8%;
+    }
+
+}
 
 @media only screen and (max-width:1700px) {
     .MainSection {
@@ -235,11 +280,18 @@ body {
     .MainContent {
         height: fit-content;
     }
+
+    .CarModel img {
+
+        top: 1%;
+    }
+
 }
 
-@media only screen and (max-width:1050px) {
+@media only screen and (max-width:1030px) {
 
     .MainSection {
+        width: 100%;
         grid-template-columns: repeat(2, minmax(250px, 1fr));
         grid-template-rows: repeat(13, minmax(300px, 1fr));
     }
@@ -266,6 +318,12 @@ body {
         transform: translate(-47%, 25%);
     }
 
+
+    .CarModel img {
+
+        top: -10px;
+    }
+
 }
 
 @media only screen and (max-width:735px) {
@@ -277,6 +335,7 @@ body {
     .MainContent {
         height: fit-content;
         display: block;
+        min-height: 100%;
     }
 
     html {
@@ -334,6 +393,65 @@ body {
         padding: 5px 5px;
     }
 
+
+    .CarModel img {
+
+        top: -11%;
+    }
+
+
+}
+
+
+@media only screen and (max-width:550px) {
+
+    .SideBarLi {
+
+        margin: 0 3px;
+
+    }
+
+    .CarModel22 img {
+        width: 109%;
+        transform: translate(-47%, 30%);
+    }
+
+    .CarModel img {
+
+        top: 6%;
+    }
+
+}
+
+
+@media only screen and (max-width:450px) {
+
+    .SideBarLi {
+
+        margin: 0;
+
+    }
+
+    .CarModel img {
+
+        top: 18%;
+    }
+
+}
+
+@media only screen and (max-width:350px) {
+    .carData {
+        min-height: 100px;
+    }
+
+    .price {
+        font-size: 1.3em;
+    }
+
+    .CarModel img {
+
+        top: 20%;
+    }
 
 }
 
@@ -463,43 +581,292 @@ body {
 
 
 
-@media only screen and (max-width:650px) {
 
-    .SideBarLi {
 
-        margin: 0 3px;
 
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    /* Center the modal */
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    /* You can adjust the width */
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    .CarModel img {
-
-        top: 35px;
+    to {
+        opacity: 1;
     }
+}
 
-    .CarModel22 img {
-        width: 109%;
-        transform: translate(-47%, 30%);
-    }
 
+.ModalLabels {
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.ModalInputs {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #f9f9f9;
 
 }
 
-@media only screen and (max-width:450px) {
 
-    .SideBarLi {
-
-        margin: 0;
-
-    }
-
-
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 
 
-@media only screen and (max-width:450px) {
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 0.3s ease-out;
+}
 
-    .carData {
-        min-height: 100px;
+.ModalHeader {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.modal-content #ModalSubmit {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-content #ModalSubmit:hover {
+    background-color: #0056b3;
+
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator {
+    background-position: 0;
+    color: transparent;
+}
+
+input[type="month"] {
+    width: auto;
+    padding: 10px;
+}
+
+
+.ImageModal {
+    width: 88%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End General Components  */
+
+
+#CarStage {
+
+    /* Adjust spacing between columns */
+}
+
+#CarStage .CarStageContent {
+    display: flex;
+    margin: 10px 10px 0 auto;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    right: 0.1vw;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+.stage-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stage-item {
+    flex: 1 1 30%;
+    /* Grow to fill space, but not less than 30% */
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    /* Smooth transition */
+}
+
+.stage-item:hover {
+    transform: scale(1.05);
+    /* Scale effect on hover */
+}
+
+.LatestRents,
+.LatestNotifications,
+.OtherInformation {
+    background-color: rgb(35 80 108);
+    padding: 3px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    color: white;
+    align-items: center;
+    font-size: 1em;
+    display: none;
+
+}
+
+.CarStageContent.open .LatestRents,
+.CarStageContent.open .LatestNotifications,
+.CarStageContent.open .OtherInformation {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+#CarStage .expanded-content {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 90%;
+    height: 85%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: none;
+}
+
+
+
+/* Show the expanded content when activeInside class is toggled */
+.LatestRents.activeInside .expanded-content,
+.LatestNotifications.activeInside .expanded-content,
+.OtherInformation.activeInside .expanded-content {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.MainMenuOpener {
+    width: fit-content;
+    margin: 0 0 0 auto;
+    height: fit-content;
+    font-size: 2em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.LatestRents i,
+.LatestNotifications i,
+.OtherInformation i {
+    background-color: #1e6aa7;
+    border: none;
+    padding: 7px;
+    border-radius: 8px;
+    margin-right: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.StageButton {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+@keyframes UpRoll {
+    from {
+        height: 100%;
     }
 
+    to {
+        height: 0;
+    }
+}
+
+.RollUpAnimation {
+    animation: UpRoll 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
