@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+      <!-- Header Section -->
+      <header class="navbar">
+        <div class="logo">
+            <img src="../Images/black-logo.png" alt="Logo">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="contact.html">contact-us</a></li>
+                <li><a href="sign-in.html" class="sign">Sign In</a></li>
+                <li><a href="join-us.html" class="sign">join-us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+      <h1>Book Your Dream Car Now!!</h1>
+    </div>
+    <video autoplay loop muted playsinline>
+        <source src="Images/car.mp4" type="video/mp4">
+      </video>
+  </section>
+        <!-- Car Gallery Section -->
+        <section class="car-gallery">
+          <div class="container">
+              <h2>Choose Your Car</h2>
+              <div class="filters">
+                  <div class="filter-group">
+                      <label for="make">Car Type:</label>
+                      <select id="make" aria-label="Filter by car make">
+                          <option value="">All</option>
+                          <option value="Toyota">Toyota</option>
+                          <option value="Honda">Honda</option>
+                          <option value="Kia">Kia</option>
+                          <option value="Mitsubishi">Mitsubishi</option>
+                          <option value="BMW">BMW</option>
+                          <option value="Hyundai">Hyundai</option>
+                      </select>
+                  </div>
+  
+                  <div class="filter-group">
+                      <label for="year">Year:</label>
+                      <select id="year" aria-label="Filter by year">
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                      </select>
+                  </div>
+  
+                  <div class="filter-group">
+                      <label for="price">Price:</label>
+                      <div class="price-slider">
+                          <input type="range" id="price-slider" min="1000" max="3500" value="1000">
+                          <span id="price-value">$1000</span>
+                      </div>
+                  </div>
+  
+                  <div class="filter-buttons">
+                      <button class="btn apply-filters-btn">Apply Filters</button>
+                      <button class="btn clear-filters-btn">Clear Filters</button>
+                  </div>
+              </div>
+    <div class="grid" id="grid">
+      <!-- Grid items will be displayed here -->
+    </div>
+  </div>
+</section>
+  
+  <!-- Booking Form Modal -->
+<div class="modal" id="booking-modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Book Your Car</h2>
+      <form id="booking-form">
+          <label for="pickup-date">Pickup Date:</label>
+          <input type="date" id="pickup-date" name="pickup-date" required>
+
+          <label for="pickup-time">Pickup Time:</label>
+          <input type="time" id="pickup-time" name="pickup-time" required>
+
+          <label for="dropoff-date">Drop-off Date:</label>
+          <input type="date" id="dropoff-date" name="dropoff-date" required>
+
+          <label for="dropoff-time">Drop-off Time:</label>
+          <input type="time" id="dropoff-time" name="dropoff-time" required>
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required placeholder="Enter pickup location">
+
+          <button class="btn book-now-btn" type="submit">Book Now</button>
+      </form>
+  </div>
+</div>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>Copyright 2024 Ramy Rent Company</p>
+      <ul>
+        <li><a href="https://www.facebook.com/ramyrentcompany">Facebook</a></li>
+        <li><a href="https://www.instagram.com/ramyrentcompany">Instagram</a></li>
+        <!-- Add more social media links -->
+      </ul>
+    </div>
+  </footer>
+  <script src="book.js"></script>
+</body>
+</html>
