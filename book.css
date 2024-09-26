@@ -1,5 +1,4 @@
 /* Global Styles */
-/* CSS Variables for easy theming */
 :root {
   --primary-color: #020758;
   --secondary-color: #ffffff;
@@ -19,8 +18,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: var(--text-color);
+  background-color: var(--accent-color);
 }
 
 /* Navbar */
@@ -47,10 +46,10 @@ body {
 }
 
 .menu ul li a {
-  color: #fff;
+  color: #384049;
   text-decoration: none;
-  padding: 10px 14px;
-  border: 2px solid #fff;
+  padding: 13px 16px;
+  border: 2px solid #2c2c2c69;
   border-radius: 25px;
   font-size: 14px;
   transition: background-color 0.3s, color 0.3s;
@@ -65,47 +64,22 @@ body {
   background-color: #005db4; 
   color: #fff;
 }
-/* Add this media query to make the navbar responsive */
-@media only screen and (max-width: 768px) {
-.navbar {
+
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+  display: none;
   flex-direction: column;
-  align-items: flex-end;
-  padding: 10px;
-}
-.menu ul {
-  flex-direction: column;
-  gap: 10px;
-}
-.menu ul li a {
-  padding: 5px 10px;
-  border-radius: 10px;
+  gap: 5px;
 }
 
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
-@media only screen and (max-width: 480px) {
-  .hero video {
-  display: none;
-  }
-  .navbar {
-  background-color: black; 
-  padding: 5px;
-  justify-content: center; /* Align the menu to the left side */
-}
-.logo img {
-  content: url(Images/logo.png);
-  width: 20%;
-}
-.menu ul {
-  text-align: left; /* Align the menu to the left side */
-}
-.menu ul li a {
-  padding: 3px 5px;
-  font-size: 12px;
-}
-.hero h1 {
-display: none;
-}
-}
+
 /* Hero Section */
 .hero {
   position: relative;
@@ -133,12 +107,11 @@ display: none;
   margin: 0;
   padding-top: 80%;
   color: #FFFFFF;
-text-shadow: 0 -1px 4px #97d0ff, 0 -2px 10px rgb(39, 2, 253), 0 -10px 20px #ff8a05, 0 -18px 40px rgb(2, 29, 70);
+  text-shadow: 0 -1px 4px #97d0ff, 0 -2px 10px rgb(39, 2, 253), 0 -10px 20px #ff8a05, 0 -18px 40px rgb(2, 29, 70);
 }
 
 /* Car Gallery */
 .car-gallery {
-  background-color: var(--accent-color);
   padding: 40px 20px;
 }
 
@@ -160,6 +133,8 @@ text-shadow: 0 -1px 4px #97d0ff, 0 -2px 10px rgb(39, 2, 253), 0 -10px 20px #ff8a
   justify-content: center;
   gap: 20px;
   margin-bottom: 30px;
+  margin-top: 5%;
+  padding-top: 3%;
 }
 
 .filter-group {
@@ -222,8 +197,9 @@ text-shadow: 0 -1px 4px #97d0ff, 0 -2px 10px rgb(39, 2, 253), 0 -10px 20px #ff8a
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
   gap: 20px;
+  margin: 0px 20px 0 20px;
 }
 
 .grid-item {
@@ -242,7 +218,7 @@ text-shadow: 0 -1px 4px #97d0ff, 0 -2px 10px rgb(39, 2, 253), 0 -10px 20px #ff8a
 
 .grid-item img {
   width: 100%;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -331,71 +307,132 @@ text-shadow: 0 -1px 4px #97d0ff, 0 -2px 10px rgb(39, 2, 253), 0 -10px 20px #ff8a
 }
 
 /* Footer */
-footer {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 20px;
-  text-align: center;
-}
-
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-footer ul {
-  list-style: none;
+.footer {
+  position: relative;
+  width: 100%;
+  background: rgb(0, 0, 0);
+background: linear-gradient(0deg, rgb(8, 8, 8) 68%, rgba(255,255,255,0.1825105042016807) 100%);
+  min-height: 100px;
+  padding: 20px 50px;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
+  align-items: center;
+  flex-direction: column;
 }
 
-footer ul li a {
-  color: var(--secondary-color);
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
   text-decoration: none;
-  font-size: 16px;
+  opacity: 0.75;
+  font-weight: 300;
 }
 
-footer ul li a:hover {
-  text-decoration: underline;
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
+  .navbar .menu ul {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+    cursor: pointer;
   }
 
-  .menu ul {
-      flex-direction: column;
-      width: 100%;
-  }
-
-  .menu ul li {
-      width: 100%;
+  .menu ul.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffffb9;
+    padding: 20px;
+    z-index: 5;
   }
 
   .menu ul li a {
-      display: block;
-      width: 100%;
-      text-align: left;
-      padding: 10px 0;
+    color: #000;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .video
+  {
+    height: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero{
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+    height : 60vh;
+  }
+  .logo img {
+    width: 20%;
+  }
+  .car-gallery{
+    margin-top: 0rem;
+    padding-top: 0rem;
   }
 
-  .filters {
-      flex-direction: column;
-      align-items: center;
+  .menu ul li a {
+    padding: 3px 17px;
+    font-size: 12px;
+    padding-bottom: 0%;
+    border-bottom: 0%;
   }
 
-  .filter-buttons {
-      flex-direction: row;
-      gap: 20px;
+  .hero h1 {
+   font-size: x-large;
+   padding-top: 40px;
   }
-
-  .modal-content {
-      width: 95%;
-      margin-top: 20%;
+  .hero video
+  {
+  max-height: 30rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
   }
 }
