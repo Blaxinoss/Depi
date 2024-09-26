@@ -78,6 +78,7 @@ body {
   height: 3px;
   background-color: #fff;
   transition: all 0.3s ease;
+
 }
 
 /* Hero Section */
@@ -381,13 +382,14 @@ background: linear-gradient(0deg, rgb(8, 8, 8) 68%, rgba(255,255,255,0.182510504
   .menu ul.active {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
+    gap: 0.2rem;
+    align-items: right;
+    position: fixed;
+    top: 2.5rem;
+    left: 60%;
+    width: 30%;
     background-color: #ffffffb9;
-    padding: 20px;
+    padding: 5px 0 5px 0;
     z-index: 5;
   }
 
