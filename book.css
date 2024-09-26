@@ -70,6 +70,8 @@ body {
   display: none;
   flex-direction: column;
   gap: 5px;
+  width: 100%; /* Use width: 100% */
+  text-align: center; /* Add this line to center the span */
 }
 
 .hamburger-menu span {
@@ -78,6 +80,8 @@ body {
   height: 3px;
   background-color: #fff;
   transition: all 0.3s ease;
+  position: relative;
+  margin: 0 auto;
 }
 
 /* Hero Section */
@@ -381,13 +385,13 @@ background: linear-gradient(0deg, rgb(8, 8, 8) 68%, rgba(255,255,255,0.182510504
   .menu ul.active {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
+    gap: 5px;
+    position:fixed;
+    top: 60px;
+    left: 66%;
+    width: 30%;
     background-color: #ffffffb9;
-    padding: 20px;
+    padding: 15px;
     z-index: 5;
   }
 
