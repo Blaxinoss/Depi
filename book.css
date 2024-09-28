@@ -12,9 +12,10 @@
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
   padding: 0;
+  max-width: 110%;
 }
 
 body {
@@ -72,9 +73,10 @@ body {
 .hamburger-menu {
   display: none;
   flex-direction: column;
+  position: relative;
   gap: 5px;
   width: 100%; /* Full width for better touch targets */
-  text-align: center;
+  left: 10%;
 }
 
 .hamburger-menu span {
@@ -201,7 +203,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
   gap: 20px;
   justify-content: center;
-  margin: 0% 10%;
 }
 .grid-item {
   background-color: var(--secondary-color);
@@ -384,10 +385,10 @@ body {
     flex-direction: column;
     gap: 10px;
     position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    top: 50px;
+    left: 60%;
+    width: 30%;
+    background-color: rgb(255, 255, 255);
     padding: 15px;
     z-index: 5;
   }
