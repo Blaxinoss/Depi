@@ -392,7 +392,6 @@ body {
     padding: 15px;
     z-index: 5;
   }
-
   .menu ul li a {
     color: #000;
     border: none;
@@ -400,7 +399,6 @@ body {
     text-align: center;
     border-radius: 10px;
   }
-
   .hero {
     height: 50vh;
     margin-bottom: 0;
@@ -437,7 +435,16 @@ body {
     padding-bottom: 0%;
     border-bottom: 0%;
   }
-
+  .grid-item {
+    background-color: var(--secondary-color);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    justify-content: center;
+  }
   .hero h1 {
    font-size: x-large;
    padding-top: 40px;
@@ -488,6 +495,7 @@ body {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     width: 100%;
+    justify-content: center;
   }
   .grid-item img {
     height: 150px;

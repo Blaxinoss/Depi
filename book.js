@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <img src="${car.img}" alt="${car.make} ${car.model}">
               <p><strong>${car.make} ${car.model}</strong></p>
               <p>Year: ${car.year}</p>
-              <p>Price: $${car.price}</p>
+              <p>Price: ${car.price} L.E</p>
               <button class="book-now-btn">Book Now</button>
           `;
           grid.appendChild(carElement);
