@@ -25,4 +25,4 @@ dropdown.forEach((element) => {
       dropdown.style.display = "none";
     }
   });
-});
+}); 

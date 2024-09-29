@@ -68,7 +68,7 @@ quizForm.addEventListener('submit', (e) => {
             <p>Year: ${filteredCars[0].year}</p>
             <p>Seating Capacity: ${filteredCars[0].seatingCapacity}</p>
             <p>Luggage Space: ${filteredCars[0].luggageSpace}</p>
-            <p>Price: ${filteredCars[0].price}</p>
+            <p>Price: ${filteredCars[0].price} L.E.</p>
             <button id="retake-btn">Retake Quiz</button>
         `;
     }
