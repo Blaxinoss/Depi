@@ -51,6 +51,7 @@ h1 {
 
 form {
   background-color: #727070bb;
+  background-color: #727070bb;
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   padding: 40px;
@@ -65,6 +66,8 @@ form {
 
 .question label {
   font-size: 16px;
+  color: #000000;
+  font-weight: bolder;
   color: #000000;
   font-weight: bolder;
   margin-bottom: 8px;
@@ -95,6 +98,7 @@ input[type="number"]:focus {
   border: none;
   padding: 15px 0;
   font-weight: bolder;
+  font-weight: bolder;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
@@ -104,18 +108,24 @@ input[type="number"]:focus {
 
 #submit-btn:hover {
   background-color: #090630;
+  background-color: #090630;
 }
 
 #retake-btn {
   background-color: rgb(3, 0, 0);
   color: #ffffff;
+  background-color: rgb(3, 0, 0);
+  color: #ffffff;
   border: none;
+  padding: 15px 5px;
   padding: 15px 5px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
   width: 50%;
+  width: 50%;
   transition: background-color 0.3s;
+  margin: 20px 0 20px 0;
   margin: 20px 0 20px 0;
 }
 
@@ -133,6 +143,9 @@ input[type="number"]:focus {
   /* Add some space from the form */
   padding: 15px 50px;
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -160,6 +173,7 @@ input[type="number"]:focus {
 
 #result img {
   border-radius: 10px;
+  width: 120%;
   width: 120%;
   max-width: 700px;
   margin: 0 20px -20px -30px;
