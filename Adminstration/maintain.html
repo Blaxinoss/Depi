@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Adminstration/dashboard.css">
+    <link rel="stylesheet" href="../Adminstration/Styles/dashboard.css">
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <title>Document</title>
@@ -20,7 +20,12 @@
 <body>
     <div class="MainContent">
         <div class="SideBar">
-            <div class="logo">Ramy Rent</div>
+            <div class="logo">Ramy Rent
+                <div class="SideBarLogOut">
+                    <i class="fa-solid fa-right-from-bracket SideBarIcon"></i>
+                    <div>Logout</div>
+                </div>
+            </div>
             <ul class="SideBarUl">
                 <li class="SideBarLi">
                     <i class="fa-solid fa-border-all SideBarIcon"></i>
@@ -32,7 +37,7 @@
                 </li>
                 <li class="SideBarLi">
                     <i class="fa-solid fa-id-card SideBarIcon"></i>
-                    <a href="">Rents</a>
+                    <a href="rent.html">Rents</a>
                 </li>
 
                 <li class="SideBarLi active">
@@ -40,10 +45,7 @@
                     <a href="maintain.html">Maintenance</a>
                 </li>
             </ul>
-            <div class="SideBarLogOut">
-                <i class="fa-solid fa-right-from-bracket SideBarIcon"></i>
-                <div>Logout</div>
-            </div>
+
         </div>
 
         <div class="MainSection">
@@ -56,41 +58,51 @@
                     <div class="sploit">
                         <div class="form" id="maintenanceForm">
                             <form action="">
-                                <label for="person-name">Name of the person:</label>
-                                <input type="text" id="person-name" placeholder="Enter name">
+                                <div class="nest">
+                                    <div class="pair">
+                                        <label for="person-name">Name of the person:</label>
+                                        <input type="text" id="person-name" placeholder="Enter name">
+                                    </div>
+                                    <div class="pair">
+                                        <label for="date">Date:</label>
+                                        <input type="datetime-local" id="date">
+                                    </div>
+                                </div>
 
-                                <label for="date">Date:</label>
-                                <input type="datetime-local" id="date">
+                                <div class="nest">
+                                    <div class="pair">
+                                        <label for="car-select">Select the car:</label>
+                                        <input list="Cars" id="car-select" placeholder="Choose a car">
+                                    </div>
+                                    <div class="pair">
+                                        <label for="maintain-description">Description of maintenance:</label>
+                                        <input type="text" id="maintain-description" placeholder="Maintenance details">
+                                    </div>
+                                </div>
 
-                                <label for="car-select">Select the car:</label>
-                                <input list="Cars" id="car-select" placeholder="Choose a car">
-                                <datalist id="Cars">
-                                    <option value="Car1"></option>
-                                    <option value="Car2"></option>
-                                    <option value="Car3"></option>
-                                    <option value="Car4"></option>
-                                    <option value="Car5"></option>
-                                    <option value="Car6"></option>
-                                    <option value="Car7"></option>
-                                    <option value="Car8"></option>
-                                    <option value="Car9"></option>
-                                </datalist>
+                                <div class="nest">
+                                    <div class="pair">
+                                        <label for="notes">Notes:</label>
+                                        <textarea id="notes" placeholder="Additional notes"></textarea>
+                                    </div>
+                                    <div class="pair">
+                                        <label for="total-price">Total Price:</label>
+                                        <input type="number" id="total-price" placeholder="Enter total price">
+                                    </div>
+                                </div>
 
-                                <label for="maintain-description">Description of maintenance:</label>
-                                <input type="text" id="maintain-description" placeholder="Maintenance details">
+                                <div class="nest">
+                                    <div class="pair">
+                                        <label for="paid">Paid:</label>
+                                        <input type="number" id="paid" placeholder="Amount paid">
+                                    </div>
+                                    <div class="pair">
+                                        <label for="remaining">Remaining:</label>
+                                        <input type="number" id="remaining" placeholder="Remaining amount">
+                                    </div>
+                                </div>
 
-                                <label for="notes">Notes:</label>
-                                <textarea id="notes" placeholder="Additional notes"></textarea>
-
-                                <label for="total-price">Total Price:</label>
-                                <input type="number" id="total-price" placeholder="Enter total price">
-
-                                <label for="paid">Paid:</label>
-                                <input type="number" id="paid" placeholder="Amount paid">
-
-                                <label for="remaining">Remaining:</label>
-                                <input type="number" id="remaining" placeholder="Remaining amount">
-                                <input type="submit">
+                                <input class="submitMaintain" type="submit" value="Submit">
                             </form>
                         </div>
 
@@ -100,12 +112,13 @@
                     </div>
                 </div>
                 <div class="table-container">
-                    <input type="text" id="searchInput" placeholder="🔍Search Maintenance Records"
-                        onkeyup="filterTable()">
+
                     <h2>Maintenance Records</h2>
+                    <input type="text" id="searchInput" placeholder="🔍 Search Maintenance Records">
                     <table id="maintenanceTable">
                         <thead>
                             <tr>
+                                <th>Id</th>
                                 <th>Person</th>
                                 <th>Date</th>
                                 <th>Car</th>
@@ -114,10 +127,10 @@
                                 <th>Total Price</th>
                                 <th>Paid</th>
                                 <th>Remaining</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Rows will be dynamically added here -->
                         </tbody>
                     </table>
                 </div>
@@ -126,7 +139,7 @@
         </div>
 
     </div>
-    <script src="dashboard.js"></script>
+    <script src="/Adminstration/Scripts/dashboard.js"></script>
 </body>
 
 </html>

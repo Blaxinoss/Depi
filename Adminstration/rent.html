@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Adminstration/Styles/dashboard.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="MainContent">
+        <div class="SideBar">
+            <div class="logo">Ramy Rent
+                <div class="SideBarLogOut">
+                    <i class="fa-solid fa-right-from-bracket SideBarIcon"></i>
+                    <div>Logout</div>
+                </div>
+            </div>
+            <ul class="SideBarUl">
+                <li class="SideBarLi">
+                    <i class="fa-solid fa-border-all SideBarIcon"></i>
+                    <a href="dashbaord.html">Dashboard</a>
+                </li>
+                <li class="SideBarLi ">
+                    <i class="fa-solid fa-car SideBarIcon"></i>
+                    <a href="cars.html">Cars</a>
+                </li>
+                <li class="SideBarLi active">
+                    <i class="fa-solid fa-id-card SideBarIcon"></i>
+                    <a>Rents</a>
+                </li>
+                <li class="SideBarLi">
+                    <i class="fa-solid fa-wrench SideBarIcon"></i>
+                    <a href="maintain.html">Maintenance</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="MainSection" id="MainSection">
+            <div class="container">
+                <h2>Recent Rents</h2>
+                <div class="controls">
+                    <input type="text" id="searchInputRent" placeholder="🔍 Search Rents" onkeyup="filterTableRent()">
+
+                    <button class="export-btn">Export <i class="fas fa-file-export"></i></button>
+                </div>
+
+                <div class="RentTableHolder">
+                    <table id="RentTable">
+                        <div class="RentOpener"></div>
+                        <div id="overlay" class="overlay"></div>
+                        <div class="RentContainer">
+
+                            <div class="FormRent form" id="RentFormContainer">
+
+                                <form action="">
+                                    <div class="TwiceParent">
+                                        <div class="pair">
+                                            <label for="Rent-Name">Name</label>
+                                            <input type="text" id="Rent-Name" placeholder="Enter name">
+                                        </div>
+                                        <div class="pair">
+                                            <label for="National-Id">National ID</label>
+                                            <input type="text" id="National-Id">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="TwiceParent">
+                                        <div class="pair">
+                                            <label for="RentCar-Model">Car Model</label>
+                                            <input list="Cars" id="RentCar-Model" placeholder="Choose a car">
+                                        </div>
+                                        <div class="pair">
+                                            <label for="Car-Plate">Car Numbers</label>
+                                            <input type="text" id="Car-Plate" placeholder="Maintenance details">
+                                        </div>
+                                    </div>
+
+                                    <div class="TwiceParent">
+                                        <div class="pair">
+                                            <label for="Rent-Date">Rent date</label>
+                                            <input type="datetime-local" id="Rent-Date">
+                                        </div>
+                                        <div class="pair">
+                                            <label for="Return-Date">Returning date</label>
+                                            <input type="datetime-local" id="Return-Date">
+                                        </div>
+                                    </div>
+
+                                    <div class="TwiceParent">
+                                        <div class="pair">
+                                            <label for="KilosBef-Rents">Kilos before rent</label>
+                                            <input type="text" id="KilosBef-Rents"
+                                                placeholder="Additional notes"></input>
+                                        </div>
+                                        <div class="pair">
+                                            <label for="Rent-TotalPrice">Total Price:</label>
+                                            <input type="number" id="Rent-TotalPrice" placeholder="Enter total price">
+                                        </div>
+                                    </div>
+
+                                    <div class="TwiceParent">
+                                        <div class="pair">
+                                            <label for="Rent-PaidPrice">Paid:</label>
+                                            <input type="number" id="Rent-PaidPrice" placeholder="Amount paid">
+                                        </div>
+                                        <div class="pair">
+                                            <label for="Rent-RemainPrice    ">Remaining:</label>
+                                            <input type="number" id="Rent-RemainPrice" placeholder="Remaining amount">
+                                        </div>
+                                    </div>
+
+                                    <input class="DoneRentEdit" type="submit" value="Done">
+                                    <input class="SubmitRent" type="submit" value="Submit">
+                                </form>
+                            </div>
+                        </div>
+                        <thead>
+                            <tr>
+
+                                <th>Rent ID</th>
+                                <th>Name</th>
+                                <th>National Id</th>
+                                <th>Car Model</th>
+                                <th>Car Plate</th>
+                                <th>Rent Date</th>
+                                <th>Return Date</th>
+                                <th>Kilos before rent</th>
+                                <th>Total Price</th>
+                                <th>Paid</th>
+                                <th>Remaining</th>
+                                <th>Status</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+
+
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Adminstration/Scripts/rent.js"></script>
+
+</body>
+
+</html>

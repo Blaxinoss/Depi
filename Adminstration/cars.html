@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Adminstration/Admin.css">
+    <link rel="stylesheet" href="../Adminstration/Styles/Admin.css">
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <title>Document</title>
@@ -20,7 +20,12 @@
 <body>
     <div class="MainContent">
         <div class="SideBar">
-            <div class="logo">Ramy Rent</div>
+            <div class="logo">Ramy Rent
+                <div class="SideBarLogOut">
+                    <i class="fa-solid fa-right-from-bracket SideBarIcon"></i>
+                    <div>Logout</div>
+                </div>
+            </div>
             <ul class="SideBarUl">
                 <li class="SideBarLi">
                     <i class="fa-solid fa-border-all SideBarIcon"></i>
@@ -32,17 +37,14 @@
                 </li>
                 <li class="SideBarLi">
                     <i class="fa-solid fa-id-card SideBarIcon"></i>
-                    <a>Rents</a>
+                    <a href="rent.html">Rents</a>
                 </li>
                 <li class="SideBarLi">
                     <i class="fa-solid fa-wrench SideBarIcon"></i>
                     <a href="maintain.html">Maintenance</a>
                 </li>
             </ul>
-            <div class="SideBarLogOut">
-                <i class="fa-solid fa-right-from-bracket SideBarIcon"></i>
-                <div>Logout</div>
-            </div>
+
         </div>
 
         <div class="MainSection" id="MainSection">
@@ -522,58 +524,147 @@
 
             </div>
         </div>
-        <div id="CarStage" style="display: none;">
+        <div class="StageHolder">
+            <div id="CarStage" style="display: none;">
+                <div id="overlay" class="overlay"></div>
+                <div class="expanded-content">
 
 
-            <div class="expanded-content" id="LatestRentsData">
-                <h2>Latest Rents</h2>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Return Date</th>
-                        <th>Money required</th>
-                        <th>Notes</th>
-                    </tr>
-                    <tr>
-                        <td>AEWAEWAE</td>
-                        <td>12303213213</td>
-                        <td>432432$</td>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                    </tr>
-                </table>
-            </div>
+                    <table id="maintenanceTable">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Person</th>
+                                <th>Date</th>
+                                <th>Car</th>
+                                <th>Maintenance</th>
+                                <th>notes</th>
+                                <th>Total Price</th>
+                                <th>Paid</th>
+                                <th>Remaining</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamed Ahmed</td>
+                                <td>13-9-2024</td>
+                                <td>Hyndai ELentra 2021 Red</td>
+                                <td>Changing full oil</td>
+                                <td>+2000 crash</td>
+                                <td>2000</td>
+                                <td>1600</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamed Ahmed</td>
+                                <td>13-9-2024</td>
+                                <td>Hyndai ELentra 2021 Red</td>
+                                <td>Changing full oil</td>
+                                <td>+2000 crash</td>
+                                <td>2000</td>
+                                <td>1600</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamed Ahmed</td>
+                                <td>13-9-2024</td>
+                                <td>Hyndai ELentra 2021 Red</td>
+                                <td>Changing full oil</td>
+                                <td>+2000 crash</td>
+                                <td>2000</td>
+                                <td>1600</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamed Ahmed</td>
+                                <td>13-9-2024</td>
+                                <td>Hyndai ELentra 2021 Red</td>
+                                <td>Changing full oil</td>
+                                <td>+2000 crash</td>
+                                <td>2000</td>
+                                <td>1600</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamed Ahmed</td>
+                                <td>13-9-2024</td>
+                                <td>Hyndai ELentra 2021 Red</td>
+                                <td>Changing full oil</td>
+                                <td>+2000 crash</td>
+                                <td>2000</td>
+                                <td>1600</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamed Ahmed</td>
+                                <td>13-9-2024</td>
+                                <td>Hyndai ELentra 2021 Red</td>
+                                <td>Changing full oil</td>
+                                <td>+2000 crash</td>
+                                <td>2000</td>
+                                <td>1600</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamed Ahmed</td>
+                                <td>13-9-2024</td>
+                                <td>Hyndai ELentra 2021 Red</td>
+                                <td>Changing full oil</td>
+                                <td>+2000 crash</td>
+                                <td>2000</td>
+                                <td>1600</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mohamed Ahmed</td>
+                                <td>13-9-2024</td>
+                                <td>Hyndai ELentra 2021 Red</td>
+                                <td>Changing full oil</td>
+                                <td>+2000 crash</td>
+                                <td>2000</td>
+                                <td>1600</td>
+                                <td>400</td>
+                            </tr>
 
+                        </tbody>
+                    </table>
 
+                </div>
 
-            <div class="CarStageContent">
-
-
-                <div class="LatestRents">
-                    <i id="StageProf1" class="fas fa-caret-square-down"></i>
-                    <h3>Other Information</h3>
-                    <div class="expanded-content">
+                <div class="CarStageContent">
+                    <div class="OtherInformation">
+                        <i id="StageProf1" class="fas fa-caret-square-down ArrowDownCarStage"></i>
+                        <h3>Other Information</h3>
 
                     </div>
-                </div>
-                <div class="LatestNotifications">
-                    <i id="StageProf2" class="fas fa-caret-square-down"></i>
-                    <h3>Latest Notifications</h3>
-                    <div class="expanded-content">
+                    <div class="LatestNotifications">
+                        <i id="StageProf2" class="fas fa-caret-square-down ArrowDownCarStage"></i>
+                        <h3>Latest Notifications</h3>
 
                     </div>
-                </div>
-                <div class="OtherInformation">
-                    <i id="StageProf3" class="fas fa-caret-square-down"></i>
-                    <h3>Latest Rents</h3>
+                    <div class="LatestRents">
+                        <i id="StageProf3" class="fas fa-caret-square-down ArrowDownCarStage"></i>
+                        <h3>Latest Rents</h3>
 
+                    </div>
+                    <i class="fas fa-bars MainMenuOpener"></i>
                 </div>
-                <i class="fas fa-bars MainMenuOpener"></i>
             </div>
-
         </div>
+
+
+
     </div>
 
-    <script src="../Adminstration/admin.js"></script>
+    <script src="../Adminstration/Scripts/admin.js"></script>
 </body>
 
 </html>

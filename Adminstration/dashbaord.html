@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
@@ -11,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Adminstration/dashboard.css">
+    <link rel="stylesheet" href="../Adminstration/Styles/dashboard.css">
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <title>Document</title>
@@ -20,7 +21,12 @@
 <body>
     <div class="MainContent">
         <div class="SideBar">
-            <div class="logo">Ramy Rent</div>
+            <div class="logo">Ramy Rent
+                <div class="SideBarLogOut">
+                    <i class="fa-solid fa-right-from-bracket SideBarIcon"></i>
+                    <div>Logout</div>
+                </div>
+            </div>
             <ul class="SideBarUl">
                 <li class="SideBarLi active">
                     <i class="fa-solid fa-border-all SideBarIcon"></i>
@@ -28,21 +34,18 @@
                 </li>
                 <li class="SideBarLi">
                     <i class="fa-solid fa-car SideBarIcon"></i>
-                    <a href="cars.html">Cars</a>
+                    <a href="cars.html">Cars </a>
                 </li>
                 <li class="SideBarLi">
                     <i class="fa-solid fa-id-card SideBarIcon"></i>
-                    <a>Rents</a>
+                    <a href="rent.html">Rents</a>
                 </li>
                 <li class="SideBarLi">
                     <i class="fa-solid fa-wrench SideBarIcon"></i>
                     <a href="maintain.html">Maintenance</a>
                 </li>
             </ul>
-            <div class="SideBarLogOut">
-                <i class="fa-solid fa-right-from-bracket SideBarIcon"></i>
-                <div>Logout</div>
-            </div>
+
         </div>
 
         <div class="MainSection" id="MainSection">
@@ -77,8 +80,8 @@
                 </div>
             </div>
 
-            <div class="SquareContainer">
-                <div class="SquareBox">
+            <div class="SquareContainer ">
+                <div class="SquareBox TableLatestRents">
                     <h2>Latest Rents</h2>
                     <table>
                         <tr>
@@ -143,7 +146,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="SquareBox">
+                <div class="SquareBox TableNotif">
                     <h2>What's Coming Today</h2>
                     <p>Notifications or important updates...</p>
                     <ul>
@@ -159,7 +162,7 @@
     </div>
     </div>
 
-    <script src="dashboard.js"></script>
+    <script src="/Adminstration/Scripts/dashboard.js"></script>
 </body>
 
 </html>
