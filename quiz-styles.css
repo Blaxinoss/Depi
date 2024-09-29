@@ -30,10 +30,6 @@ h1 {
   text-shadow: 6px 6px #989898, 12px 12px #6c6666;
 }
 
-margin-bottom: 30px;
-text-align: center;
-}
-
 /* Flexbox container for form and result */
 .container {
   display: flex;
