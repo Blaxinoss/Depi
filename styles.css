@@ -38,11 +38,12 @@ body {
 .menu ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 10px 14px;
   border: 2px solid #fff;
   border-radius: 25px;
   font-size: 14px;
   transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
 }
 
 .menu ul li a:hover {
@@ -53,6 +54,44 @@ body {
 .menu ul li a.sign:hover {
   background-color: #005db4;
   color: #fff;
+}
+
+/* Add this media query to make the navbar responsive */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 5px;
+    justify-content: flex-start;
+    /* Align the menu to the left side */
+  }
+
+  .menu ul {
+    text-align: left;
+    /* Align the menu to the left side */
+  }
+
+  .menu ul li a {
+    padding: 3px 5px;
+    font-size: 12px;
+  }
 }
 
 /* Hero Section */
@@ -211,6 +250,10 @@ body {
   }
 }
 
+.hero-section .overlay-text h1 {
+  font-size: 48px;
+}
+
 @media (max-width: 480px) {
   .hero-section .overlay-text h1 {
     font-size: 36px;
@@ -314,8 +357,10 @@ body {
 /*about us*/
 /* About Us Section */
 .about-us-section {
-  padding: 60px 20px;
-  background-color: #242424;
+  padding: 30px 20px;
+  background: rgb(15, 15, 15);
+  background: linear-gradient(0deg, #202020 0%, rgba(47, 47, 47, 1) 48%, rgba(69, 70, 70, 1) 100%);
+
 }
 
 .about-us-container {
@@ -1143,8 +1188,44 @@ ul {
   }
 }
 
-@media (max-width: 1322px) {
-  .menu ul li a:not(.gallery, .sign-in, .join-us) {
-    display: none;
+
+
+.marquee {
+  margin: 0;
+  width: 100%;
+  max-width: 1800px;
+  /* adjust this value to your liking */
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  /* changed from absolute to relative */
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 24px;
+  /* increased font size */
+  animation: marquee 20s linear infinite;
+  /* increased animation duration */
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
   }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+/* added new rules for infinite scrolling */
+.marquee span:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.marquee span:nth-child(2) {
+  animation-direction: reverse;
 }
