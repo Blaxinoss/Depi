@@ -278,7 +278,7 @@ body {
 /* Quiz CTA Section */
 .quiz-section {
 
-  background-color: #161616;
+  background-color: #292929;
   padding: 60px 0;
   display: flex;
   justify-content: center;
@@ -546,7 +546,7 @@ body {
 }
 
 .faq.active {
-  background-color: #3586ff;
+  background-color: #2cb3f0;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
 }
 
@@ -676,6 +676,12 @@ body {
   font-size: 1rem;
   font-weight: 300;
 }
+@media (max-width: 776px) {
+  .footer{
+    margin-top: 30%;
+  }
+}
+
 
 .wave {
   position: absolute;
@@ -969,63 +975,81 @@ ul {
   }
 }
 
-
-
-.marquee {
-  margin: 0;
-  width: 100%;
-  max-width: 1800px;
-  /* adjust this value to your liking */
-  white-space: nowrap;
-  overflow: hidden;
-  position: relative;
-  /* changed from absolute to relative */
-}
-
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  font-size: 24px;
-  /* increased font size */
-  animation: marquee 20s linear infinite;
-  /* increased animation duration */
-}
-
-
-@keyframes marquee {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(-100%, 0);
-  }
-}
-
-/* added new rules for infinite scrolling */
-.marquee span:nth-child(2) {
-  animation-delay: 0s;
-}
-
-.marquee span:nth-child(2) {
-  animation-direction: reverse;
-}
-.swiper-container {
-  width: 100%;
-  height: 150px; /* Adjust height to fit the size of your icons */
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
+.how-it-works {
+  padding: 50px 0;
   align-items: center;
+  text-align: center;
+  background-color: #161616
 }
 
-.swiper-slide img {
-  width: 100px; /* Adjust icon size as needed */
-  height: auto;
+.how-it-works-header h1 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 10px;
+  font-weight: 500;
 }
-.swiper-wrapper {
-  display: flex;  /* Makes sure slides align horizontally */
-  flex-direction: row;  /* Ensures horizontal alignment */
+
+.how-it-works-btn {
+  background-color: #e0edff;
+  color: #003b7e;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: default;
+  font-size: 14px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.step {
+  background-color: #f0f6ff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step img {
+  width: 50px;
+  height: 50px;
+}
+
+.step h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 15px 0;
+}
+
+.step p {
+  color: #1b1b1b;
+  font-size: 14px;
+}
+
+.brand-logos {
+  background-color: #151516;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.brand-logos img {
+  height: 3rem ;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.brand-logos img:hover {
+  opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  .brand-logos img {
+    width: 20%;
+  }
 }
