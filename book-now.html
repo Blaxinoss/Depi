@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--meta data-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental Service</title>
+    <!--Stylesheets-->
     <link rel="stylesheet" href="book.css">
 </head>
 <body>
@@ -144,6 +146,7 @@
           <li class="menu__item"><a class="menu__link" href="quiz.html">Quiz</a></li>
           <li class="menu__item"><a class="menu__link" href="contact-us.html">Contact Us</a></li>
       </ul>
+      
       <p>&copy;2024 Ramy Rent | All Rights Reserved</p>
     </div>
   </footer>
@@ -152,11 +155,14 @@
     <script>
         const hamburger = document.getElementById('hamburger-menu');
         const menuList = document.getElementById('menu-list');
-
+ // Get the hamburger menu and menu list elements
+ // Add an event listener to the hamburger menu
         hamburger.addEventListener('click', () => {
+            // Toggle the 'active' class on the menu list
             menuList.classList.toggle('active');
         });
     </script>
+    <!-- -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="book.js"></script>

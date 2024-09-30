@@ -1,7 +1,5 @@
-// @ts-nocheck
 
 // script.js
-
 document.addEventListener('DOMContentLoaded', () => {
     // Car data array
     const cars = [
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { make: 'Toyota', model: "Toyota", year: 2021, seatingCapacity: 5, luggageSpace: "Medium", price: 1800, img: "Images/Toyota Corolla White 2021.png" }
     ];
 
-
+// DOM elements
     const grid = document.getElementById('grid');
     const makeFilter = document.getElementById('make');
     const yearFilter = document.getElementById('year');
