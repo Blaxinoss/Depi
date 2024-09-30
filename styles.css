@@ -23,12 +23,12 @@ body {
   width: 100%;
   z-index: 10;
 }
-
+/* Logo styles */
 .logo img {
   width: 15%;
   height: auto;
 }
-
+/* Navigation menu styles */
 .menu ul {
   list-style: none;
   display: flex;
@@ -55,8 +55,7 @@ body {
   background-color: #005db4;
   color: #fff;
 }
-
-/* Add this media query to make the navbar responsive */
+/* Responsive design for navbar */
 @media only screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -227,14 +226,14 @@ body {
   z-index: 5;
   letter-spacing: 5px;
 }
-
+/* Hero image styles */
 .hero-section .car-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-/* Responsive Design */
+/* Responsive Design for hero section*/
 @media (max-width: 768px) {
   .menu ul {
     gap: 10px;
@@ -266,7 +265,7 @@ body {
 }
 
 /*end hero section*/
-
+/*start quiz section */
 .quiz h2 {
   color: #333;
 }
@@ -311,7 +310,7 @@ body {
   margin-bottom: 20px;
   color: #8a8a8a;
 }
-
+/* Quiz Button */
 .quiz-link-btn {
   display: inline-block;
   padding: 12px 25px;
@@ -336,7 +335,7 @@ body {
 
 }
 
-/* Responsive Layout */
+/* Responsive Layout for quiz*/
 @media (max-width: 768px) {
   .quiz-cta-container {
     flex-direction: column;
@@ -354,7 +353,6 @@ body {
   }
 }
 
-/*about us*/
 /* About Us Section */
 .about-us-section {
   padding: 30px 20px;
@@ -416,7 +414,7 @@ body {
 
 }
 
-/* Responsive Layout */
+/* Responsive Layout for about us*/
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
@@ -433,10 +431,6 @@ body {
   }
 }
 
-/* End Header */
-
-
-/* Start General Sections Settings */
 .quiz-section {
   margin-top: -6px;
 }
@@ -474,6 +468,7 @@ body {
   margin-bottom: 20px;
   color: #8a8a8a;
 }
+/* Book Now Button */
 
 .book-now-link-btn {
   display: inline-block;
@@ -500,7 +495,7 @@ body {
   border-radius: 10px;
 }
 
-/* Responsive Layout */
+/* Responsive Layout  for book now*/
 @media (max-width: 768px) {
 .book-now-container {
     flex-direction: column;
@@ -615,7 +610,8 @@ body {
 }
 
 
-/* /////End Book Now */
+/* End Book Now */
+/* Start Footer */
 .footer {
   position: relative;
   width: 100%;
@@ -683,6 +679,7 @@ body {
 }
 
 
+/* wave animation footer*/
 .wave {
   position: absolute;
   top: -100px;
@@ -739,6 +736,7 @@ body {
   }
 }
 
+/* Modal styles */
 
 .numbers,
 .email {
@@ -810,6 +808,8 @@ ul {
   cursor: pointer;
 }
 
+
+/* Floating Button */
 
 .floating-container {
   position: fixed;
@@ -886,6 +886,7 @@ ul {
   box-shadow: 0 20px 20px -10px rgba(37, 162, 211, 0.5);
 }
 
+
 @keyframes come-in {
   0% {
     transform: translatey(100px);
@@ -906,6 +907,7 @@ ul {
   }
 }
 
+/* Responsive Design for Modal */
 @media (max-width: 768px) {
   .modal-content {
     width: 50%;
@@ -954,7 +956,7 @@ ul {
 }
 
 
-
+/*  End of Responsive Design for Modal */
 @keyframes animateWaves {
   0% {
     background-position-x: 1000px;
@@ -975,6 +977,7 @@ ul {
   }
 }
 
+/* How it works section */
 .how-it-works {
   padding: 50px 0;
   align-items: center;
@@ -1028,6 +1031,7 @@ ul {
   color: #1b1b1b;
   font-size: 14px;
 }
+/* Brand Logos */
 
 .brand-logos {
   background-color: #151516;
@@ -1053,3 +1057,4 @@ ul {
     width: 20%;
   }
 }
+/* end styles */
