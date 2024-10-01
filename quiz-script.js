@@ -1,3 +1,4 @@
+// Define the cars data
 const quizForm = document.getElementById('quiz-form');
 const resultDiv = document.getElementById('result');
 const carsData = [
@@ -25,6 +26,8 @@ const carsData = [
     { model: "Toyota", year: 2021, seatingCapacity: 5, luggageSpace: "Medium", price: 1800, image: "Images/Toyota Corolla White 2021.png" }
 ];
 
+// Function to filter cars based on seating capacity, luggage space, and budget
+
 quizForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const seatingCapacity = parseInt(document.getElementById('seating-capacity').value);
@@ -49,7 +52,7 @@ quizForm.addEventListener('submit', (e) => {
                 nearestCar = car;
             }
         });
-
+// Display the recommended car
         resultDiv.innerHTML = `
             <h2>Recommended Car:</h2>
             <img src="${nearestCar.image}" alt="${nearestCar.model}" width="200" height="300">
@@ -73,11 +76,11 @@ quizForm.addEventListener('submit', (e) => {
         `;
     }
 
-
+// Hide the quiz form and show the result
     quizForm.style.display = 'none';
     heroh.style.display = 'none';
     resultDiv.style.display = 'block';
-
+// Add event listener to the retake button
 
     document.getElementById('retake-btn').addEventListener('click', () => {
       

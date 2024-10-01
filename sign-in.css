@@ -1,5 +1,6 @@
+/* import font */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
-
+/* reset general*/
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,7 @@ body {
   width: 100%;
   padding: 0 10px;
 }
+/* background image */
 
 body::before {
   content: "";
@@ -25,7 +27,7 @@ body::before {
   background-position: center;
   background-size: cover;
 }
-
+/* wrapper styles*/
 .wrapper {
   width: 400px;
   border-radius: 8px;
