@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Adminstration/Styles/dashboard.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="MainContent">
+        <div class="SideBar">
+            <div class="logo">Ramy Rent
+                <div class="SideBarLogOut">
+                    <i class="fa-solid fa-right-from-bracket SideBarIcon"></i>
+                    <div>Logout</div>
+                </div>
+            </div>
+            <ul class="SideBarUl">
+                <li class="SideBarLi">
+                    <i class="fa-solid fa-border-all SideBarIcon"></i>
+                    <a href="dashbaord.html">Dashboard</a>
+                </li>
+                <li class="SideBarLi">
+                    <i class="fa-solid fa-car SideBarIcon"></i>
+                    <a href="cars.html">Cars</a>
+                </li>
+                <li class="SideBarLi">
+                    <i class="fa-solid fa-id-card SideBarIcon"></i>
+                    <a href="rent.html">Rents</a>
+                </li>
+
+                <li class="SideBarLi active">
+                    <i class="fa-solid fa-wrench SideBarIcon"></i>
+                    <a href="maintain.html">Maintenance</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="MainSection">
+            <div class="MaintainSection">
+
+                <div class="EnterMaintainContainer">
+
+
+                    <h2>Add A Maintenance Record</h2>
+                    <div class="sploit">
+                        <div class="form" id="maintenanceForm">
+                            <form action="">
+                                <div class="nest">
+                                    <div class="pair">
+                                        <label for="person-name">Name of the person:</label>
+                                        <input type="text" id="person-name" placeholder="Enter name">
+                                    </div>
+                                    <div class="pair">
+                                        <label for="date">Date:</label>
+                                        <input type="datetime-local" id="date">
+                                    </div>
+                                </div>
+
+                                <div class="nest">
+                                    <div class="pair">
+                                        <label for="car-select">Select the car:</label>
+                                        <input list="Cars" id="car-select" placeholder="Choose a car">
+                                    </div>
+                                    <div class="pair">
+                                        <label for="maintain-description">Description of maintenance:</label>
+                                        <input type="text" id="maintain-description" placeholder="Maintenance details">
+                                    </div>
+                                </div>
+
+                                <div class="nest">
+                                    <div class="pair">
+                                        <label for="notes">Notes:</label>
+                                        <textarea id="notes" placeholder="Additional notes"></textarea>
+                                    </div>
+                                    <div class="pair">
+                                        <label for="total-price">Total Price:</label>
+                                        <input type="number" id="total-price" placeholder="Enter total price">
+                                    </div>
+                                </div>
+
+                                <div class="nest">
+                                    <div class="pair">
+                                        <label for="paid">Paid:</label>
+                                        <input type="number" id="paid" placeholder="Amount paid">
+                                    </div>
+                                    <div class="pair">
+                                        <label for="remaining">Remaining:</label>
+                                        <input type="number" id="remaining" placeholder="Remaining amount">
+                                    </div>
+                                </div>
+
+                                <input class="submitMaintain" type="submit" value="Submit">
+                            </form>
+                        </div>
+
+                        <div class="CarPlace">
+                            <img src="../Images/Stage/cerato2018black.png" alt="Car Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container">
+
+                    <h2>Maintenance Records</h2>
+                    <input type="text" id="searchInput" placeholder="🔍 Search Maintenance Records">
+                    <table id="maintenanceTable">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Person</th>
+                                <th>Date</th>
+                                <th>Car</th>
+                                <th>Maintenance</th>
+                                <th>notes</th>
+                                <th>Total Price</th>
+                                <th>Paid</th>
+                                <th>Remaining</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./Scripts/dashboard.js"></script>
+</body>
+
+</html>

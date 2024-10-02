@@ -1,0 +1,182 @@
+/* Global styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('./Images/texture.jpg');
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+
+h1 {
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgb(11, 0, 158),
+    0px 0px 15px rgb(11, 0, 61),
+    0px 0px 20px rgb(10, 0, 48),
+    0px 0px 30px rgb(13, 6, 110),
+    0px 0px 40px rgb(0, 0, 0),
+    0px 0px 55px rgb(4, 0, 36),
+    0px 0px 75px rgb(1, 2, 110);
+
+}
+
+.shadow10 {
+  text-shadow: 6px 6px #989898, 12px 12px #6c6666;
+}
+
+/* Flexbox container for form and result */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.form-result-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+form {
+  background-color: #727070bb;
+  background-color: #727070bb;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Form fields */
+.question {
+  margin-bottom: 20px;
+}
+
+.question label {
+  font-size: 16px;
+  color: #000000;
+  font-weight: bolder;
+  color: #000000;
+  font-weight: bolder;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.question select,
+.question input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+select:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #66CCCC;
+  box-shadow: 0 0 5px rgba(102, 204, 204, 0.6);
+}
+
+/* Button styling */
+#submit-btn {
+  background-color: rgb(15, 3, 190);
+  color: #ffffff;
+  border: none;
+  padding: 15px 0;
+  font-weight: bolder;
+  font-weight: bolder;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
+  background-color: #090630;
+  background-color: #090630;
+}
+
+#retake-btn {
+  background-color: rgb(3, 0, 0);
+  color: #ffffff;
+  background-color: rgb(3, 0, 0);
+  color: #ffffff;
+  border: none;
+  padding: 15px 5px;
+  padding: 15px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50%;
+  width: 50%;
+  transition: background-color 0.3s;
+  margin: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
+}
+
+#retake-btn:hover {
+  background-color: rgb(11, 0, 158);
+}
+
+/* Result styling */
+#result {
+  text-align: center;
+  /* Center-align all content */
+  max-width: 400px;
+  width: 100%;
+  margin-top: 20px;
+  /* Add some space from the form */
+  padding: 15px 50px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#result h2 {
+  font-size: 28px;
+  color: #ffffff;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 1),
+    0px 0px 10px rgb(11, 0, 158),
+    0px 0px 15px rgb(11, 0, 61),
+    0px 0px 20px rgb(10, 0, 48),
+    0px 0px 30px rgb(13, 6, 110),
+    0px 0px 40px rgb(0, 0, 0),
+    0px 0px 55px rgb(4, 0, 36),
+    0px 0px 75px rgb(1, 2, 110);
+  margin-bottom: 15px;
+}
+
+#result p {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 8px;
+}
+
+#result img {
+  border-radius: 10px;
+  width: 120%;
+  width: 120%;
+  max-width: 700px;
+  margin: 0 20px -20px -30px;
+  /* Center the image */
+}

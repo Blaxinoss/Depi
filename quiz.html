@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Recommendation Quiz</title>
+    <link rel="stylesheet" href="quiz-styles.css">
+</head>
+<body>
+
+    <h1 id="heroh">Car Recommendation Quiz</h1>
+    <!-- Form -->
+    <form id="quiz-form">
+        <div class="question">
+            <label for="seating-capacity">How many people will the car need to seat?</label>
+            <select id="seating-capacity" name="seating-capacity">
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="luggage-space">How much luggage space do you need?</label>
+            <select id="luggage-space" name="luggage-space">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
+        <div class="question">
+            <label for="budget">What is your budget?</label>
+            <input type="number" id="budget" name="budget" min="1000" max="3500">
+        </div>
+        
+        <button id="submit-btn">Get Recommended Car</button>
+    </form>
+    <!--result-->
+    <div id="result" style="display: none;"></div>
+    <script src="quiz-script.js"></script>
+</body>
+</html>

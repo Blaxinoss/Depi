@@ -10,17 +10,14 @@
 
 /* Fonts */
 
-@font-face {
-    font-family: "MainFont";
-    src: url(/Fonts/Guminert.ttf);
-}
-
 li {
     list-style: none;
 }
 
 html {
-    font-size: 16px;
+
+    font-size: 1em;
+
 }
 
 body {
@@ -38,25 +35,36 @@ body {
 /* Start Header */
 
 .header {
+
     background-color: #000814;
-    color: white;
+    color: #ffff00;
     padding: 15px 20px;
     display: flex;
     align-items: center;
+    font-size: 1vw;
     justify-content: space-between;
 }
 
 .header .logo {
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .header ul {
-    background-color: #003556;
-    padding: 15px;
+    background-color: #3b3e40;
+    padding: 10px;
     color: white;
     border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgb(43 41 15 / 23%);
 }
+
+
+
+
+
 
 .header ul li {
     display: inline-block;
@@ -75,21 +83,182 @@ body {
 
 .header .Sign_Login .Sign,
 .header .Sign_Login .Login {
+
     cursor: pointer;
     border-radius: 10px;
     color: white;
-    padding: 12px;
-    font-size: 1.3rem;
+    padding: 10px;
+    min-width: fit-content;
+
 }
 
 .Sign {
-    background-color: rgb(148, 34, 34);
+    background-color: rgb(148 34 34 / 65%);
 }
+
 
 .Login {
-    background-color: #0f777e;
+    background-color: #0f777eb5;
 }
 
+.quiz h2 {
+    color: #333;
+}
+
+.quiz p {
+    color: #666;
+}
+
+/* Quiz CTA Section */
+.quiz-section {
+
+    background-color: #d9d9d9;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.quiz-text {
+    max-width: 50%;
+}
+
+.quiz-text h2 {
+    font-size: 36px;
+    color: #2a2a72;
+    margin-bottom: 15px;
+}
+
+.quiz-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.quiz-link-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #009ffd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-link-btn:hover {
+    background-color: #006fbc;
+}
+
+/* Quiz Image Section */
+.quiz-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    padding-top: 10%;
+
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .quiz-cta-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quiz-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .quiz-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/*about us*/
+/* About Us Section */
+.about-us-section {
+    padding: 60px 20px;
+    background-color: #ececea;
+}
+
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-title h2 {
+    font-size: 36px;
+    color: #2a2a72;
+    text-align: center;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #009ffd;
+    margin: 10px auto 30px auto;
+}
+
+/* About Us Content */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: hsl(209, 100%, 30%);
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .about-image img {
+        margin-top: 20px;
+    }
+}
 
 /* End Header */
 
@@ -101,54 +270,7 @@ body {
     margin-top: -6px;
 }
 
-.quiz-section {
-    background-color: #ffc300;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    height: 300px;
-}
 
-.laptop-container {
-    flex: 1;
-    text-align: center;
-}
-
-.text-container {
-    flex: 2;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: bold;
-    font-size: 35px;
-}
-
-#quiz-button {
-    background-color: #ffffff;
-    color: #003556;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.image-text-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.image-container {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.text-container {
-    flex: 2;
-}
 
 /* /////Start Book Now */
 
@@ -189,18 +311,25 @@ body {
 .IntroVideo {
     width: 100%;
     object-fit: cover;
-    height: 35vw;
+    height: 100%;
+
 }
 
 .LandingVidSection {
     position: relative;
     perspective: 500px;
+    height: 35vw;
+
+}
+
+.LandingVidSection .ContentBox .ContentData {
+    padding: 10px;
 }
 
 .LandingVidSection .ContentBox {
-    padding: 20px;
-    height: 60%;
-    width: 35%;
+    width: 100%;
+    min-height: 300px;
+    padding: 35px;
     position: absolute;
     left: 80%;
     top: 50%;
@@ -212,40 +341,41 @@ body {
     -webkit-backdrop-filter: blur(4.9px);
     border: 1px solid rgba(255, 254, 254, 0.39);
     animation: VideoContentBoxShowUp 2s cubic-bezier(0.815, 0.005, 0.240, 1.000) forwards;
+
 }
 
-
-
 .LandingVidSection .ContentBox .ContentData h1 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
+
+    font-size: 1.3rem;
     margin-bottom: 0;
+    margin-top: 5px;
     color: #f9ff00;
 
 }
 
 .LandingVidSection .ContentBox .ContentData h4 {
-    margin-bottom: 20px;
+
+    margin-bottom: 5px;
     margin-top: 10px;
     color: #121010;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
 
 }
 
-.LandingVidSection .ContentBox .ContentData {
-    padding: 0 10px;
-}
 
 .LandingVidSection .ContentBox .ContentData button {
+    font-size: 0.4rem;
     display: block;
     margin: 0 0 0 auto;
-    background-color: #0064a3;
+    background-color: #f9ff37;
     cursor: pointer;
-    padding: 20px;
+    padding: 10px;
     position: relative;
-    font-size: 1.3rem;
     border-radius: 20px;
     border: none;
-    color: white;
+    color: #000000;
+
 }
 
 /* End Section 1  */
@@ -274,6 +404,10 @@ body {
 }
 
 /* End KeyFrames */
+
+
+
+/* Start Book Section */
 .book-now .inputs {
     padding: 120px 0 130px;
     display: flex;
@@ -390,3 +524,124 @@ body {
 }
 
 /* /////End Book Now */
+
+
+
+
+
+
+
+
+
+
+/* Start Media Quieries */
+@media screen and (min-width:200px) {
+    .LandingVidSection .ContentBox {
+        width: 50%;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 0.7rem;
+        margin-bottom: 0;
+        margin-top: 5px;
+        color: #f9ff00;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h4 {
+        margin-bottom: 5px;
+        margin-top: 10px;
+        color: #ffffff;
+        font-size: 0.5rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData {
+        padding: 5px;
+        font-size: 0.3rem;
+    }
+}
+
+@media screen and (max-width:619px) {
+    .LandingVidSection .ContentBox {
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 620px) {
+    .LandingVidSection .ContentBox {
+        width: 50%;
+    }
+
+    .LandingVidSection .ContentBox .ContentData {
+        padding: 20px;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 1.8rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData button {
+        font-size: 1rem;
+        padding: 13px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .LandingVidSection .ContentBox {
+        width: 50%;
+    }
+
+
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 2.4rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h4 {
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 3rem;
+        margin-top: 15px;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h4 {
+        font-size: 0.9rem;
+        margin: 20px 0;
+    }
+
+    .LandingVidSection .ContentBox {
+        width: 40%;
+    }
+
+    .LandingVidSection .ContentBox .ContentData button {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1400px) {
+    .LandingVidSection .ContentBox {
+        width: 35%;
+        padding: 25px;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h1 {
+        font-size: 3rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData h4 {
+        margin: 40px 0;
+        font-size: 1.3rem;
+    }
+
+    .LandingVidSection .ContentBox .ContentData button {
+        padding: 15px;
+    }
+}
+
+
+
+/* End Media Quieries */

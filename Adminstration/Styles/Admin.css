@@ -1,0 +1,1056 @@
+/* Start Globals */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family: "Cairo", sans-serif;
+    font-weight: 600;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+    width: 100%;
+}
+
+a:visited {
+    color: white;
+}
+
+
+/* End Globals */
+
+
+
+
+
+
+/* Start MainContent*/
+
+.MainContent {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+}
+
+.SideBar {
+    color: white;
+    width: 250px;
+    background-color: #000814;
+
+    font-size: 2em;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+.SideBarUl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.SideBarLi {
+    cursor: pointer;
+    font-size: 0.7em;
+    padding: 15px 30px;
+    margin: 5px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.active {
+    background-color: #2e8c54;
+    border-radius: 10px;
+    width: 141px;
+}
+
+.active::before {
+    content: "";
+    border-left: 10px solid #f3db2f;
+    position: absolute;
+    height: 70%;
+    left: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+
+.SideBarLi i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.SideBarLi:last-child::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 2px solid #ffffff20;
+    width: 80%;
+    bottom: -10px;
+    left: 5%;
+    top: 50%;
+}
+
+.SideBarLogOut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff20;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.SideBarLogOut i {
+    margin: 8px;
+    font-size: 0.8em;
+}
+
+.SideBarLogOut div {
+    width: 100%;
+}
+
+/* Main Section Styles */
+.MainSection {
+    width: 100%;
+    background-color: #2C323D;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(50px, 300px));
+    grid-template-rows: repeat(5, minmax(300px, 2fr));
+    padding: 20px;
+    gap: 30px 20px;
+}
+
+/* End MainContent*/
+
+
+
+/* Start Car Model */
+
+.CarModel {
+    position: relative;
+    background-color: #8bcdcd;
+    text-align: center;
+    color: white;
+    background: linear-gradient(#09203F, #537895);
+    padding: 15px;
+    border-radius: 10px;
+    font-family: "Carter One", sans-serif;
+    font-weight: 300;
+}
+
+.CarModel img {
+    width: 88%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 30%);
+
+}
+
+.TextData {
+    font-size: 1.1em;
+    text-align: start;
+    margin: 0 0 20px 10px;
+}
+
+.TextData h4 {
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.TextData .Date {
+    font-size: 0.7em;
+    color: #999999;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.carData .PriceDetails .price p:last-child {
+    font-size: 0.67em;
+    bottom: -5px;
+    position: relative;
+}
+
+.PriceDetails {
+    position: absolute;
+    font-size: 0.8em;
+    width: 90%;
+    gap: 15px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.PriceDetails .price p:first-of-type {
+    color: #DE8350;
+}
+
+.PriceDetails .ViewDetails,
+.PriceDetails .ViewDetailsAddCard {
+    background-color: #09203F;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.CarModel #ViewDetailsAddCard {
+    padding: 2.5vw;
+    font-size: 1.4rem;
+
+}
+
+#AddCarModel {
+    background-color: lightgray;
+    box-shadow: inset 0 0 2px 0px rgb(255, 72, 0);
+    animation: breathing 2s ease-in-out infinite;
+}
+
+
+/* End Car Model */
+
+
+
+
+/* Start Keyframes for Car Model */
+
+
+@keyframes breathing {
+    0% {
+        box-shadow: inset 0 0 2px 0px rgb(255, 72, 0);
+    }
+
+    50% {
+        box-shadow: inset 0 0 5px 2px rgb(239, 73, 7);
+    }
+
+    100% {
+        box-shadow: inset 0 0 2px 0px rgb(239, 73, 7);
+    }
+}
+
+
+
+@media only screen and (min-width:1700px) {
+    .CarModel img {
+        top: 8%;
+    }
+
+}
+
+@media only screen and (max-width:1700px) {
+    .MainSection {
+
+        grid-template-columns: repeat(4, minmax(auto, 1fr));
+        grid-template-rows: repeat(7, minmax(300px, 1fr));
+    }
+}
+
+@media only screen and (max-width:1350px) {
+    .MainSection {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        grid-template-rows: repeat(9, minmax(300px, 1fr));
+    }
+
+    .MainContent {
+        height: fit-content;
+    }
+
+    .CarModel img {
+
+        top: 1%;
+    }
+
+}
+
+@media only screen and (max-width:1080px) {
+
+    .MainSection {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-rows: repeat(13, minmax(300px, 1fr));
+    }
+
+    .MainContent {
+        height: fit-content;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    .SideBar {
+        font-size: 1.2em;
+    }
+
+    .SideBarLi {
+        font-size: 1em;
+        padding: 15px 20px;
+    }
+
+    .CarModel22 img {
+        width: 117%;
+        transform: translate(-47%, 25%);
+    }
+
+
+    .CarModel img {
+
+        top: -25px;
+    }
+
+}
+
+@media only screen and (max-width:900px) {
+
+    .CarModel img {
+
+        top: 10px;
+    }
+}
+
+@media only screen and (max-width:778px) {
+    .MainSection {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-rows: repeat(13, minmax(252px, 1fr));
+    }
+
+    .MainContent {
+        height: fit-content;
+        display: block;
+        min-height: 100%;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    .SideBar {
+        width: 100%;
+        font-size: clamp(1em, 3vw, 2.2em);
+
+    }
+
+    .logo {
+        padding: 10px 10px;
+        margin: 0;
+    }
+
+    .SideBarUl {
+        background-color: #15326de0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6em;
+        padding: 7px;
+    }
+
+    .SideBarLi {
+        margin: 0px 3vw;
+        font-size: 0.8em;
+        padding: 3px 8px;
+    }
+
+    .SideBarLi .SideBarIcon {
+        display: none;
+    }
+
+    .SideBarLi:last-child::after {
+        display: none;
+    }
+
+    .SideBarLogOut {
+        transform: translateX(210%);
+        top: 10px;
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+    }
+
+    .SideBarLogOut div {
+        display: none;
+    }
+
+    .SideBarLi:first-child:before {
+        display: none;
+    }
+
+    .SideBarLi p {
+        padding: 5px 5px;
+    }
+
+
+    .CarModel img {
+
+        top: -11%;
+    }
+
+    .active::before {
+        display: none;
+    }
+
+    .CarModel22 img {
+        top: -10%;
+    }
+
+}
+
+
+@media only screen and (max-width:550px) {
+
+    .CarModel22 img {
+        width: 109%;
+        transform: translate(-47%, 30%);
+    }
+
+    .CarModel img {
+
+        top: 6%;
+    }
+
+}
+
+
+@media only screen and (max-width:450px) {
+
+    .SideBarLi {
+
+        margin-right: 7px;
+
+    }
+
+    .CarModel img {
+
+        top: 18%;
+    }
+
+}
+
+@media only screen and (max-width:350px) {
+    .carData {
+        min-height: 100px;
+    }
+
+    .price {
+        font-size: 1.3em;
+    }
+
+    .CarModel img {
+
+        top: 20%;
+    }
+
+}
+
+
+/* End Keyframes for Car Model */
+
+
+
+.CarModel1 img {
+    transform: translate(-50%, 50%);
+}
+
+.CarModel2 img {
+    width: 97%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel3 img {
+    transform: translate(-50%, 65%);
+}
+
+.CarModel4 img {
+    width: 80%;
+    transform: translate(-50%, 60%);
+}
+
+.CarModel5 img {
+    width: 100%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel6 img {
+    width: 104%;
+    transform: translate(-50%, 15%);
+}
+
+
+.CarModel7 img {
+    width: 95%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel8 img {
+    width: 100%;
+    transform: translate(-50%, 40%);
+}
+
+.CarModel9 img {
+    width: 100%;
+    transform: translate(-50%, 13%);
+}
+
+.CarModel10 img {
+    width: 93%;
+    transform: translate(-50%, 15%);
+}
+
+
+.CarModel11 img {
+    width: 95%;
+    transform: translate(-50%, 25%);
+}
+
+.CarModel12 img {
+    width: 95%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel13 img {
+    width: 100%;
+    transform: translate(-50%, 33%);
+}
+
+.CarModel14 img {
+    width: 110%;
+    transform: translate(-50%, 37%);
+}
+
+.CarModel15 img {
+    width: 90%;
+    transform: translate(-50%, 33%);
+}
+
+.CarModel16 img {
+    width: 98%;
+    transform: translate(-50%, 38%);
+}
+
+.CarModel17 img {
+    width: 120%;
+    transform: translate(-50%, 15%);
+}
+
+.CarModel18 img {
+    width: 104%;
+    object-fit: cover;
+    transform: translate(-46%, 30%);
+}
+
+.CarModel19 img {
+    width: 115%;
+    transform: translate(-50%, 37%);
+}
+
+.CarModel20 img {
+    width: 100%;
+    transform: translate(-50%, 10%);
+}
+
+.CarModel21 img {
+    width: 113%;
+    transform: translate(-50%, 25%);
+}
+
+.CarModel22 img {
+    width: 106%;
+    transform: translate(-47%, 13%);
+}
+
+.CarModel23 img {
+    width: 115%;
+    transform: translate(-50%, 30%);
+}
+
+.CarModel24 img {
+    width: 90%;
+    transform: translate(-50%, 30%);
+}
+
+
+
+
+
+
+
+
+
+/* Start General Modals */
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    /* Center the modal */
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    /* You can adjust the width */
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.ModalLabels {
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.ModalInputs {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #f9f9f9;
+
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.ModalHeader {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.modal-content #ModalSubmit {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-content #ModalSubmit:hover {
+    background-color: #0056b3;
+
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator {
+    background-position: 0;
+    color: transparent;
+}
+
+input[type="month"] {
+    width: auto;
+    padding: 10px;
+}
+
+
+.ImageModal {
+    width: 88%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End General Modals */
+
+
+
+/* Start Stage Part */
+
+.StageHolder {
+    width: 100%;
+    display: none;
+}
+
+#CarStage {
+    position: relative;
+}
+
+#CarStage .CarStageContent {
+    display: flex;
+    margin: 10px 10px 0 auto;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    right: 0.1vw;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+.stage-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stage-item {
+    flex: 1 1 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.stage-item:hover {
+    transform: scale(1.05);
+}
+
+.LatestRents,
+.LatestNotifications,
+.OtherInformation {
+    background-color: rgb(35 80 108);
+    padding: 3px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    color: white;
+    align-items: center;
+    font-size: 1em;
+    display: none;
+
+}
+
+.CarStageContent.open .LatestRents,
+.CarStageContent.open .LatestNotifications,
+.CarStageContent.open .OtherInformation {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+#CarStage .expanded-content.shown {
+    display: block;
+    width: 90%;
+    height: 37%;
+    display: block;
+    transition: width 1s ease-in-out, height 1s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#CarStage .expanded-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+    background-color: #14151b;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 1px 2px 9px 1px #c9d6c9;
+    overflow-y: auto;
+    z-index: 40;
+}
+
+
+.LatestRents.activeInside .expanded-content,
+.LatestNotifications.activeInside .expanded-content,
+.OtherInformation.activeInside .expanded-content {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.MainMenuOpener {
+    width: fit-content;
+    margin: 0 0 0 auto;
+    height: fit-content;
+    font-size: 2em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.LatestRents i,
+.LatestNotifications i,
+.OtherInformation i {
+    background-color: rgba(20, 21, 27, 0.8);
+    border: none;
+    padding: 7px;
+    border-radius: 8px;
+    margin-right: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.StageButton {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/* End Stage Part */
+
+
+
+
+/* Start Stage Keyframes */
+
+@keyframes UpRoll {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+
+
+.RollUpAnimation {
+    animation: UpRoll 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+
+
+@media screen and (max-width:850px) {
+    .CarStageContent {
+        font-size: 0.8em;
+    }
+
+    .CarStageContent .ArrowDownCarStage {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width:735px) {
+    .StageHolder {
+
+        height: calc(100vh - 99px);
+    }
+}
+
+
+
+@media screen and (max-width:500px) {
+    .CarStageContent {
+        font-size: 0.6em;
+    }
+
+    .CarStageContent .ArrowDownCarStage {
+        font-size: 1.7em;
+        padding: 3px;
+    }
+
+    .CarStageContent h3 {
+        font-size: 1.5em;
+    }
+
+}
+
+
+@media screen and (max-width:500px) {
+
+    .CarStageContent {
+        font-size: 0.5em;
+
+    }
+
+
+    .CarModel22 img {
+
+        width: 108%;
+        top: 12%;
+    }
+}
+
+
+/* End Stage Keyframes */
+
+
+
+
+/* Continue Car Stage2  */
+
+
+#CarStage .expanded-content table {
+    border-radius: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+
+}
+
+#CarStage .expanded-content table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+    color: white;
+}
+
+#CarStage .expanded-content table tr:last-child td {
+    border-bottom: none;
+}
+
+
+#CarStage .expanded-content table th {
+    font-weight: bold;
+}
+
+.expanded-content::-webkit-scrollbar {
+    width: auto;
+}
+
+.expanded-content::-webkit-scrollbar-track {
+    background: #565656;
+    border-radius: 10px;
+}
+
+.expanded-content::-webkit-scrollbar-thumb {
+    background: #ff7118;
+    /* Gradient effect */
+    border-radius: 10px;
+}
+
+.expanded-content::-webkit-scrollbar-thumb:hover {
+    opacity: 0.5
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.819);
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 30;
+}
+
+.overlay.show {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+
+/* Finish Car Stage 2 */

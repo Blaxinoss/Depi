@@ -1,0 +1,1060 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #000;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+/* Logo styles */
+.logo img {
+  width: 15%;
+  height: auto;
+}
+/* Navigation menu styles */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
+.menu ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.menu ul li a.sign:hover {
+  background-color: #005db4;
+  color: #fff;
+}
+/* Responsive design for navbar */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 5px;
+    justify-content: flex-start;
+    /* Align the menu to the left side */
+  }
+
+  .menu ul {
+    text-align: left;
+    /* Align the menu to the left side */
+  }
+
+  .menu ul li a {
+    padding: 3px 5px;
+    font-size: 12px;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+.overlay-text {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: 180%;
+  font-weight: 300;
+  left: 6%;
+  top: 17%;
+  color: #fff;
+  padding: 1.2;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 5;
+  letter-spacing: 5px;
+}
+/* Hero image styles */
+.hero-section .car-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive Design for hero section*/
+@media (max-width: 768px) {
+  .menu ul {
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .hero-section .overlay-text h1 {
+    font-size: 48px;
+  }
+}
+
+.hero-section .overlay-text h1 {
+  font-size: 48px;
+}
+
+@media (max-width: 480px) {
+  .hero-section .overlay-text h1 {
+    font-size: 36px;
+  }
+
+  .menu ul li a {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+/*end hero section*/
+/*start quiz section */
+.quiz h2 {
+  color: #333;
+}
+
+.quiz p {
+  color: #666;
+}
+
+/* Quiz CTA Section */
+.quiz-section {
+
+  background-color: #292929;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.quiz-text {
+  max-width: 50%;
+}
+
+.quiz-text h2 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px #005db4;
+}
+
+.quiz-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #8a8a8a;
+}
+/* Quiz Button */
+.quiz-link-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #009ffd;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-link-btn:hover {
+  background-color: #006fbc;
+}
+
+/* Quiz Image Section */
+.quiz-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  padding-top: 8%;
+
+}
+
+/* Responsive Layout for quiz*/
+@media (max-width: 768px) {
+  .quiz-cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quiz-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .quiz-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* About Us Section */
+.about-us-section {
+  padding: 30px 20px;
+  background: rgb(15, 15, 15);
+  background: linear-gradient(0deg, #202020 0%, rgba(47, 47, 47, 1) 48%, rgba(69, 70, 70, 1) 100%);
+
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title h2 {
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #0782b3;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #0782b3;
+  margin: 0px auto 50px auto;
+}
+
+/* About Us Content */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-text strong {
+  color: #0782b3;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+
+}
+
+/* Responsive Layout for about us*/
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .about-image img {
+    margin-top: 20px;
+  }
+}
+
+.quiz-section {
+  margin-top: -6px;
+}
+/* Book Now Section Styles */
+.book-now-section {
+  background-color: #161616;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-now-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.book-now-text {
+  max-width: 50%;
+  justify-content: left;
+}
+
+.book-now-text h2 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px #005db4;
+}
+
+.book-now-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #8a8a8a;
+}
+/* Book Now Button */
+
+.book-now-link-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #009ffd;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-link-btn:hover {
+  background-color: #006fbc;
+}
+
+.book-now-image {
+  max-width: 50%;
+}
+
+.book-now-image img {
+  max-width: 95%;
+  border-radius: 10px;
+}
+
+/* Responsive Layout  for book now*/
+@media (max-width: 768px) {
+.book-now-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+.book-now-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+ .book-now-image {
+    max-width: 100%;
+    margin: 0 auto;
+
+  }
+}
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+.fre{
+  background-color: #000000;
+  font-family: 'Muli', sans-serif;
+  margin-bottom: 10%;
+}
+
+.fre h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faqs-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #fcfeff;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #2cb3f0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+
+.faq.active::before {
+  color: #001727;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+  color: black;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #ffffff;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+  color: #83888E;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+
+/* End Book Now */
+/* Start Footer */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+@media (max-width: 776px) {
+  .footer{
+    margin-top: 30%;
+  }
+}
+
+
+/* wave animation footer*/
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+
+
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    /* Start smaller */
+    opacity: 0;
+    /* Start hidden */
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    /* End at full size */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+/* Modal styles */
+
+.numbers,
+.email {
+  font-size: 0.8rem;
+
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+
+}
+
+.modal.show {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  animation: slideIn 0.2s ease forwards;
+  opacity: 1;
+}
+
+.modal-content {
+
+  background-color: #242424;
+  position: absolute;
+  /* Change to absolute positioning */
+  left: 75%;
+  /* Center horizontally */
+  top: 40%;
+  /* Center vertically */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 25%;
+  max-width: 600px;
+  /* Optional: set a max width */
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Optional: add shadow for better visibility */
+}
+
+.modal.show .modal-content {
+  transform: translate(-19%, -90%) scale(1);
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Floating Button */
+
+.floating-container {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
+}
+
+.floating-container:hover {
+  height: 200px;
+}
+
+.floating-container:hover .floating-button {
+  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  transform: translatey(5px);
+  transition: all 0.3s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(1) {
+  animation: come-in 0.4s forwards 0.2s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(2) {
+  animation: come-in 0.4s forwards 0.4s;
+}
+
+.floating-container .floating-button {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #2cb3f0;
+  bottom: 0;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  line-height: 65px;
+  text-align: center;
+  font-size: 23px;
+  z-index: 100;
+  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.floating-container .float-element {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  z-index: 0;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.floating-container .float-element .material-icons,
+.floating-container .float-element .fab {
+  vertical-align: middle;
+  font-size: 24px;
+}
+
+.floating-container .float-element:nth-child(1) {
+  background: #2cb3f0;
+  /* WhatsApp Green */
+  box-shadow: 0 20px 20px -10px rgba(37, 162, 211, 0.5);
+}
+
+
+@keyframes come-in {
+  0% {
+    transform: translatey(100px);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translateX(-50px) scale(0.4);
+  }
+
+  70% {
+    transform: translateX(0px) scale(1.2);
+  }
+
+  100% {
+    transform: translatey(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 50%;
+    /* Take 80% of the screen width for smaller screens */
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    padding: 15px;
+    /* Adjust padding */
+    max-width: none;
+    /* Remove max-width restriction */
+  }
+
+  .modal-content h2,
+  /* Example heading */
+  .modal-content p {
+    /* Example paragraph */
+    font-size: 14px;
+    /* Smaller font size */
+  }
+}
+
+@media (max-width: 350px) {
+  .modal-content {
+    width: 80%;
+    /* Maintain 80% width for very small screens */
+    left: 50%;
+    top: 50%;
+    border-radius: 7px;
+    padding: 10px;
+    /* Reduce padding */
+  }
+
+  .modal-content h2,
+  /* Example heading */
+  .modal-content p {
+    /* Example paragraph */
+    font-size: 12px;
+    /* Smaller font size */
+  }
+
+  .close {
+    font-size: 18px;
+    /* Smaller close button */
+  }
+}
+
+
+/*  End of Responsive Design for Modal */
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+/* How it works section */
+.how-it-works {
+  padding: 50px 0;
+  align-items: center;
+  text-align: center;
+  background-color: #161616
+}
+
+.how-it-works-header h1 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.how-it-works-btn {
+  background-color: #e0edff;
+  color: #003b7e;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: default;
+  font-size: 14px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.step {
+  background-color: #f0f6ff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step img {
+  width: 50px;
+  height: 50px;
+}
+
+.step h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 15px 0;
+}
+
+.step p {
+  color: #1b1b1b;
+  font-size: 14px;
+}
+/* Brand Logos */
+
+.brand-logos {
+  background-color: #151516;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.brand-logos img {
+  height: 3rem ;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.brand-logos img:hover {
+  opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  .brand-logos img {
+    width: 20%;
+  }
+}
+/* end styles */

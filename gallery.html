@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Service</title>
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar"">
+        <div class=" logo">
+        <img src="./Images/black-logo.png" alt="Logo">
+        </div>
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="menu">
+            <ul id="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="" class="contactUsBtn">Contact us</a></li>
+                <li><a href="sign-in.html" class="sign">Sign In</a></li>
+                <li><a href="join-us.html" class="sign">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Book Your Dream Car Now!!</h1>
+        </div>
+        <video autoplay loop muted playsinline>
+            <source src="./Images/car.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- Car Gallery Section -->
+    <section class="car-gallery">
+        <div class="container">
+            <div class="filters">
+                <!-- Car Type Filter -->
+                <div class="filter-group">
+                    <label for="make">Car Type:</label>
+                    <select id="make" aria-label="Filter by car make">
+                        <option value="">All</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Mitsubishi">Mitsubishi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Hyundai">Hyundai</option>
+                    </select>
+                </div>
+                
+
+                <!-- Year Filter -->
+                <div class="filter-group">
+                    <label for="year">Year:</label>
+                    <select id="year" aria-label="Filter by year">
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+                    <label for="price">Price:</label>
+                    <div class="price-slider">
+                        <input type="range" id="price-slider" min="1000" max="3500" value="1000">
+                        <span id="price-value">$1000</span>
+                    </div>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="btn apply-filters-btn">Apply Filters</button>
+                    <button class="btn clear-filters-btn">Clear Filters</button>
+                </div>
+            </div>
+            <!-- Car Grid -->
+            <div class="grid" id="grid">
+                <!-- Grid items will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Modal -->
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book Your Car</h2>
+            <form id="booking-form">
+                <label for="pickup-date">Pickup Date:</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+
+                <label for="pickup-time">Pickup Time:</label>
+                <input type="time" id="pickup-time" name="pickup-time" required>
+
+                <label for="dropoff-date">Drop-off Date:</label>
+                <input type="date" id="dropoff-date" name="dropoff-date" required>
+
+                <label for="dropoff-time">Drop-off Time:</label>
+                <input type="time" id="dropoff-time" name="dropoff-time" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required placeholder="Enter pickup location">
+
+                <button class="btn book-now-btn" type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="social-icon">
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
+            </ul>
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="quiz.html">Quiz</a></li>
+                <li class="menu__item"><a class="menu__link" href="contact-us.html">Contact Us</a></li>
+
+            </ul>
+            <p>&copy;2024 Ramy Rent | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to toggle the hamburger menu on mobile -->
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const menuList = document.getElementById('menu-list');
+
+        hamburger.addEventListener('click', () => {
+            menuList.classList.toggle('active');
+        });
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="book.js"></script>
+</body>
+
+</html>

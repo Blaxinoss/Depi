@@ -2,118 +2,320 @@
 <html lang="en">
 
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-
-    <title>Document</title>
+    <title>Ramy Rent - Home</title>
+     <!-- External Stylesheets and Fonts -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+     <!-- Google Fonts Import -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 
 <body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Company Logo -->
+        <div class="logo">
+            <img src="./Images/logo.png" alt="Logo">
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="menu">
+            <ul>
+                <li><a href="Adminstration/dashbaord.html">Admin</a></li>
+                <li><a href="quiz.html">quiz</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="" class="contactUsBtn">Contact us</a></li>
+                <li><a href="sign-in.html" class="sign">Sign In</a></li>
+                <li><a href="join-us.html" class="sign">join-us</a></li>
+            </ul>
+        </nav>
+    </header>
+  <!-- Contact Modal -->
+    <div id="contactModal" class="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Contact Us</h3>
+            <p>Phone Numbers:</p>
+            <ul class="numbers">
+                <li>+1 (234) 567-8901</li>
+                <li>+1 (234) 567-8902</li>
+                <li>+1 (234) 567-8903</li>
+            </ul>
+            <p>Email: <a class="email" href="mailto:info@ramyrent.com">info@ramyrent.com</a></p>
+            <!-- Google Maps Placeholder -->
+            <div id="map" style="height: 100px; width: 100%;"></div>
+        </div>
+    </div>
+ <!-- Hero Section -->
+    <main class="hero-section" id="hero-section">
+        <div class="overlay-text">
+            <h1>luxurious <br> services </h1>
+        </div>
+        <div class="car-image">
+            <img src="./Images/car.jpg" alt="Car">
+        </div>
+    </main>
 
-    <div class="header">
-        <div class="logo">logo</div>
-        <ul class="nav_Links">
-            <li>Home</li>
-            <li>Car gallery</li>
-            <li>Booking</li>
-            <li>Car quiz</li>
-            <li>Contact us</li>
+<!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="how-it-works-header">
+          <button class="how-it-works-btn">HOW IT WORK</button>
+          <h1>Rent with following 3 working steps</h1>
+        </div>
+      <!-- Steps to Rent a Car -->
+        <div class="steps">
+          <div class="step">
+            <img src="Images/free-location-icon-2955-thumb.png" alt="Location Icon">
+            <h2>Choose location</h2>
+            <p>Choose your and find your best car</p>
+          </div>
+    
+          <div class="step">
+            <img src="Images/date.png" alt="Pick-up Date Icon">
+            <h2>Pick-up date</h2>
+            <p>Select your pick up date and time to book your car</p>
+          </div>
+    
+          <div class="step">
+            <img src="Images/car-icon-blue.png" alt="Book Car Icon">
+            <h2>Book your car</h2>
+            <p>Book your car and we will deliver it directly to you</p>
+          </div>
+        </div>
+      </section>
+     <!-- Brand Logos Section -->
+      <section class="brand-logos">
+        <img src="Images/bmw.png" alt="bmw Logo" width="7%" >
+        <img src="Images/honda.png" alt="Honda Logo">
+        <img src="Images/kia.png" alt="Kia Logo">
+        <img src="Images/toyota.png" alt="toyota Logo">
+        <img src="Images/mitsubishi.png" alt="mitsubishi Logo">
+        <img src="Images/hyundai.png" alt="hyundai Logo">
+      </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="quiz-container">
+            <!-- Text Section -->
+            <div class="quiz-text">
+                <h2>Find Your Ideal Car</h2>
+                <p>Looking for the perfect car? Take our short quiz and get personalized recommendations based on
+                    your driving preferences, budget, and more.</p>
+                <a href="quiz.html" class="quiz-link-btn">Take the Quiz</a>
+            </div>
+
+            <!-- Image Section -->
+            <div class="quiz-image">
+                <img src="./Images/hiddencar.png" alt="Car Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us-section" id="about-us-section">
+        <div class="about-us-container">
+            <!-- Title -->
+            <div class="about-title">
+                <h2>About Us</h2>
+                <div class="underline"></div>
+            </div>
+
+            <!-- About Us Content -->
+            <div class="about-content">
+                <!-- Text Section -->
+                <div class="about-text">
+                    <p>
+                        Welcome to <strong>ramy rental</strong>, your number one choice for car rentals. With a wide
+                        range of vehicles to choose from, we strive to provide the best car rental service for your
+                        needs. Whether you're looking for a luxury experience, a family-friendly ride, or an
+                        eco-friendly vehicle, we have the perfect option for you.
+                    </p>
+                    <p>
+                        Our goal is to make the car rental process smooth and hassle-free. With competitive pricing,
+                        a straightforward booking system, and 24/7 customer support, we ensure that your journey
+                        with us is exceptional. Ramy Rental, it's all about getting you on the road, quickly and
+                        comfortably.
+                    </p>
+                </div>
+
+                <!-- Image Section -->
+                <div class="about-image">
+                    <img src="Images/about-us-image.png" alt="Our Team">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Book Now Section -->
+<section class="book-now-section">
+    <div class="book-now-container">
+              <!-- Image Section -->
+      <div class="book-now-image">
+        <img src="./Images/auto.jpg" alt="Car Gallery Image">
+      </div>
+      <!-- Text Section -->
+      <div class="book-now-text">
+        <h2>Explore Our Car Gallery</h2>
+        <p>Browse our extensive collection of cars<br> and find your dream ride.</p>
+        <a href="gallery.html" class="book-now-link-btn">Book Now</a>
+      </div>
+
+    </div>
+  </section>
+<!-- Frequently Asked Questions Section -->
+  <section class="fre">
+  <h1>Frequently Asked Questions</h1>
+<div class="faqs-container">
+  <div class="faq active">
+    <h3 class="faq-title">
+        How do I make a reservation?
+    </h3>
+    <p class="faq-text">
+     You can make a reservation online, by phone, or in person at one of our locations.
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">
+        What do I need to bring with me when I pick up the car?
+    </h3>
+    <p class="faq-text">
+        You will need to bring a valid driver's license, proof of insurance, and a credit card for the deposit.
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">
+        How much is the fuel charge?
+    </h3>
+    <p class="faq-text">
+        You are responsible for returning the vehicle with the same fuel level as when you picked it up. If the fuel level is lower, you will be charged a refueling fee.
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">
+        What is your cancellation policy?
+    </h3>
+    <p class="faq-text">
+        Our cancellation policy varies depending on the reservation type and time of cancellation. Please refer to our terms and conditions for more details.
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="faq">
+    <h3 class="faq-title">
+        What's the object-oriented way to become wealthy?
+    </h3>
+    <p class="faq-text">
+      Inheritance
+    </p>
+    <button class="faq-toggle">
+      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+</section>
+             
+
+    <!-- Footer Section -->
+    <footer class="footer">
+
+        <!-- Waves -->
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <!-- Social Media Links -->
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
         </ul>
 
-        <div class="Sign_Login">
-            <div class="Sign">Sign up</div>
-            <div class="Login">Log in</div>
-        </div>
-    </div>
+        <!--  links Menu -->
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#hero-section">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#about-us-section">About-us</a></li>
+            <li class="menu__item"><a class="menu__link" href="gallery.html">gallery</a></li>
+            <li class="menu__item"><a class="menu__link" href="quiz.html">quiz</a></li>
+            <li class="menu__item"><a class="menu__link contactUsBtn" href="#contact-us">Contact-us</a></li>
+        </ul>
+        <!-- floating icons-->
 
-    <div class="LandingVidSection">
-        <video class="IntroVideo section section-1" src="StoryBlock-Mi7ytou8Fe.mp4" autoplay muted
-            disablePictureInPicture playsinline loop>
-        </video>
-        <div class="ContentBox">
-            <div class="ContentData">
-                <h1>Ride in Comfort, Arrive in Style</h1>
-                <h4>Ready to hit the road? Discover our vehicles and
-                    enjoy a superior rental experience.</h4>
-                <button>Explore Now!</button>
+        <div class="floating-container">
+            <div class="floating-button">+</div>
+            <div class="element-container">
+                <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank">
+                    <span class="float-element tooltip-left">
+                        <i class="fab fa-whatsapp"></i> </span>
+                </a>
+
+                <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank">
+                    <span class="float-element tooltip-left">
+                        <i class="fab fa-telegram"></i> <!-- Update to fab fa-telegram -->
+                    </span>
+                </a>
             </div>
         </div>
 
+        <!-- Copyright -->
+        <p>&copy;2024 Ramy Rent | All Rights Reserved</p>
+    </footer>
 
-    </div>
-    <section class="quiz-section">
-        <div class="laptop-container" style="margin-top: 80px;">
-            <img src="laptop.png" alt="Flying laptop" style="width: 520px; height: auto;">
-        </div>
-        <div class="text-container">
-            <p>Take our car quiz now<br> and get personalized <br>recommendations</p>
-            <button id="quiz-button">get Started</button>
-        </div>
-    </section>
-    <section class="image-text-section">
-        <div class="image-container">
-            <img src="about.jpg" alt="car" style="max-width: 80%; height: auto; margin-left: 50px;">
-        </div>
-        <div class="text-container">
-            <h3>about us</h3>
-            <p>about the company</p>
-        </div>
-    </section>
-
-    <section class="book-now">
-        <h2>Book Now</h2>
-        <div class="inputs">
-
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <span class="icon">🚗</span>
-                    <span id="selectedCar">Car Type</span>
-                    <span class="arrow">▼</span>
-                </button>
-                <div class="dropdown-content cars">
-                    <span onclick="selectCar('Sedan', event)">Sedan</span>
-                    <span onclick="selectCar('SUV', event)">SUV</span>
-                    <span onclick="selectCar('Truck', event)">Truck</span>
-                    <span onclick="selectCar('Truck', event)">Truck</span>
-                    <span onclick="selectCar('Truck', event)">Truck</span>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-                    <span id="selectedLocation">Pickup Location</span>
-                    <span class="arrow">▼</span>
-                </button>
-                <div class="dropdown-content locatoins">
-                    <span onclick="selectCar('Alex', event)">Alex</span>
-                    <span onclick="selectCar('Cairo', event)">Cairo</span>
-                    <span onclick="selectCar('Giza', event)">Giza</span>
-                    <span onclick="selectCar('Giza', event)">Giza</span>
-                    <span onclick="selectCar('Giza', event)">Giza</span>
-                </div>
-            </div>
-
-            <div class="date-container" data-placeholder="Pickup Date">
-                <input type="date" class="date">
-            </div>
-
-            <div class="date-container" data-placeholder="Return Date">
-                <input type="date" class="date">
-            </div>
-
-        </div>
-        <button class="book-btn"></i>Book Now</button>
-
-    </section>
-
+     <!-- FAQ Toggle Functionality (JavaScript) -->
+<script>
+    const toggles = document.querySelectorAll('.faq-toggle');
+      // Add click event listeners to each toggle button to expand/collapse FAQ content
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.parentNode.classList.toggle('active');
+      });
+    });
+    </script>
+    <!-- Ionicons for Social Media Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <!-- Google Maps Integration Script -->
+    <script src="https://maps.gomaps.pro/maps/api/js?key=AlzaSyESUDB7PxR-DPLpRyFMkA9SW_mnEjb1OEZ&callback=initMap" async
+        defer></script>
     <script src="index.js"></script>
 </body>
+
 
 </html>
