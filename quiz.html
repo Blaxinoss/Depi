@@ -1,41 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Recommendation Quiz</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <link rel="stylesheet" href="quiz-styles.css">
 </head>
 <body>
+    <div id="root"></div>
 
-    <h1 id="heroh">Car Recommendation Quiz</h1>
-    <!-- Form -->
-    <form id="quiz-form">
-        <div class="question">
-            <label for="seating-capacity">How many people will the car need to seat?</label>
-            <select id="seating-capacity" name="seating-capacity">
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div class="question">
-            <label for="luggage-space">How much luggage space do you need?</label>
-            <select id="luggage-space" name="luggage-space">
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-        </div>
-        <div class="question">
-            <label for="budget">What is your budget?</label>
-            <input type="number" id="budget" name="budget" min="1000" max="3500">
-        </div>
-        
-        <button id="submit-btn">Get Recommended Car</button>
-    </form>
-    <!--result-->
-    <div id="result" style="display: none;"></div>
-    <script src="quiz-script.js"></script>
+    <script type="text/babel">
+        const carsData = [
+            { model: 'Cn7 f4', year: 2021, seatingCapacity: 5, luggageSpace: 'Medium', price: 1800, image: 'Images/Elentra CN7 F4.png' },
+            { model: 'Kia cop', year: 2010, seatingCapacity: 4, luggageSpace: 'Small', price: 1000, image: 'Images/kia copet 2010.png' },
+            // Add the rest of your car data here...
+        ];
+
+        const QuizForm = ({ onSubmit }) => {
+            const [seatingCapacity, setSeatingCapacity] = React.useState(4);
+            const [luggageSpace, setLuggageSpace] = React.useState('Medium');
+            const [budget, setBudget] = React.useState(1000); // Set initial budget to 1000
+
+            const handleBudgetChange = (e) => {
+                const value = parseInt(e.target.value);
+                // Ensure budget never goes below 1000
+                setBudget(value < 1000 ? 1000 : value);
+            };
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                onSubmit({ seatingCapacity: parseInt(seatingCapacity), luggageSpace, budget: parseInt(budget) });
+            };
+
+            return (
+                <div>
+                    <h1>Car Recommendation Quiz</h1>
+                    <form onSubmit={handleSubmit}>
+                        <div className="question">
+                            <label>How many people will the car need to seat?</label>
+                            <select value={seatingCapacity} onChange={(e) => setSeatingCapacity(e.target.value)}>
+                                <option value={4}>4</option>
+                                <option value={5}>5</option>
+                            </select>
+                        </div>
+                        <div className="question">
+                            <label>How much luggage space do you need?</label>
+                            <select value={luggageSpace} onChange={(e) => setLuggageSpace(e.target.value)}>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                            </select>
+                        </div>
+                        <div className="question">
+                            <label>What is your budget?</label>
+                            <input type="number" value={budget} onChange={handleBudgetChange} />
+                        </div>
+                        <button id="submit-btn" type="submit">Get Recommended Car</button>
+                    </form>
+                </div>
+            );
+        };
+
+        const Result = ({ car, onRetake }) => {
+            return (
+                <div id="result">
+                    <h2>Recommended Car:</h2>
+                    <img src={car.image} alt={car.model} />
+                    <p>Model: {car.model}</p>
+                    <p>Year: {car.year}</p>
+                    <p>Seating Capacity: {car.seatingCapacity}</p>
+                    <p>Luggage Space: {car.luggageSpace}</p>
+                    <p>Price: {car.price} L.E.</p>
+                    <button id="retake-btn" onClick={onRetake}>Retake Quiz</button>
+                </div>
+            );
+        };
+
+        const App = () => {
+            const [result, setResult] = React.useState(null);
+            const [isQuizVisible, setQuizVisible] = React.useState(true);
+
+            const handleFormSubmit = (formData) => {
+                const filteredCars = carsData.filter(car =>
+                    car.seatingCapacity === formData.seatingCapacity &&
+                    car.luggageSpace === formData.luggageSpace &&
+                    car.price <= formData.budget
+                );
+
+                const recommendedCar = filteredCars.length > 0 ? filteredCars[0] : findNearestCar(formData.budget);
+                
+                setResult(recommendedCar);
+                setQuizVisible(false);
+            };
+
+            const findNearestCar = (budget) => {
+                let nearestCar = null;
+                let minDiff = Infinity;
+
+                carsData.forEach(car => {
+                    const diff = Math.abs(car.price - budget);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                        nearestCar = car;
+                    }
+                });
+
+                return nearestCar;
+            };
+
+            const handleRetake = () => {
+                setQuizVisible(true);
+                setResult(null);
+            };
+
+            return (
+                <div className="container">
+                    {isQuizVisible ? (
+                        <QuizForm onSubmit={handleFormSubmit} />
+                    ) : (
+                        <Result car={result} onRetake={handleRetake} />
+                    )}
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
 </body>
 </html>

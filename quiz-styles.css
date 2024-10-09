@@ -174,9 +174,85 @@ input[type="number"]:focus {
 
 #result img {
   border-radius: 10px;
-  width: 120%;
-  width: 120%;
+  width: 70%;
+  height: 25vh;
   max-width: 700px;
-  margin: 0 20px -20px -30px;
+  margin: auto;
   /* Center the image */
+}
+
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* Smaller font size for headings */
+  }
+
+  form {
+    padding: 20px; /* Reduced padding */
+  }
+
+  .question label {
+    font-size: 14px; /* Smaller font size for labels */
+  }
+
+  .question select,
+  .question input[type="number"] {
+    padding: 10px; /* Reduced padding for input fields */
+    font-size: 14px; /* Smaller font size for inputs */
+  }
+
+  #submit-btn, #retake-btn {
+    font-size: 14px; /* Smaller font size for buttons */
+    padding: 10px 0; /* Reduced padding for buttons */
+  }
+
+  #result h2 {
+    font-size: 24px; /* Smaller font size for result headings */
+  }
+
+  #result p {
+    font-size: 16px; /* Smaller font size for result paragraphs */
+  }
+
+  #result img {
+    height: 20vh; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px; /* Further reduced font size for very small screens */
+  }
+
+  form {
+    padding: 15px; /* Further reduced padding */
+  }
+
+  .question label {
+    font-size: 12px; /* Smaller font size for labels */
+  }
+
+  .question select,
+  .question input[type="number"] {
+    padding: 8px; /* Further reduced padding for input fields */
+    font-size: 12px; /* Smaller font size for inputs */
+  }
+
+  #submit-btn, #retake-btn {
+    font-size: 12px; /* Further reduced font size for buttons */
+    padding: 8px 0; /* Further reduced padding for buttons */
+  }
+
+  #result h2 {
+    font-size: 20px; /* Smaller font size for result headings */
+  }
+
+  #result p {
+    font-size: 14px; /* Smaller font size for result paragraphs */
+  }
+
+  #result img {
+    height: 15vh; /* Adjust image height for very small screens */
+  }
 }
