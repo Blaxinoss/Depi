@@ -1,7 +1,3 @@
----
-title: "Drifter - Car Rental System (Vanilla Version)"
----
-
 # 🚗 Drifter - Car Rental System (Vanilla Version)
 
 A simplified, lightweight version of the **Drifter** car rental system
