@@ -1,12 +1,14 @@
 ---
+title: "Drifter - Car Rental System (Vanilla Version)"
+---
 
-# 🚗 Drifter - Car Rental System (Vanilla Version)  
+# 🚗 Drifter - Car Rental System (Vanilla Version)
 
-A simplified, lightweight version of the **Drifter** car rental system built using vanilla technologies. This version demonstrates core functionalities without relying on frameworks or libraries, making it easy to understand, deploy, and customize for small projects.  
+A simplified, lightweight version of the **Drifter** car rental system
 
 ---
 
-## 📖 Overview  
+## 📖 Overview
 
 This project is a **vanilla JavaScript** implementation of the **Drifter** car rental system. It offers basic booking, car management, and rental tracking functionalities.  
 
